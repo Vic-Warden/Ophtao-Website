@@ -4,12 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pathologies Oculaires — Ophtao</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/editorial.css" />
 </head>
 <body>
 
@@ -20,12 +19,10 @@
 
   <header>
     <div class="header-inner">
-
       <a href="index.html" class="logo" aria-label="Ophtao – Accueil">
         <div class="logo-mark">
           <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M3 16C3 16 8.5 7 16 7C23.5 7 29 16 29 16C29 16 23.5 25 16 25C8.5 25 3 16 3 16Z"
-                  stroke="white" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
+            <path d="M3 16C3 16 8.5 7 16 7C23.5 7 29 16 29 16C29 16 23.5 25 16 25C8.5 25 3 16 3 16Z" stroke="white" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
             <circle cx="16" cy="16" r="4.5" stroke="white" stroke-width="1.8" fill="none"/>
             <circle cx="17.5" cy="14.5" r="1.2" fill="white"/>
           </svg>
@@ -35,7 +32,6 @@
           <div class="tagline">Dr Mégret & Associés</div>
         </div>
       </a>
-
       <nav id="main-nav" role="navigation" aria-label="Navigation principale">
         <a href="index.html">Page d'accueil</a>
         <a href="index.html#infos-pratiques">Le cabinet</a>
@@ -50,222 +46,366 @@
           </div>
         </div>
       </nav>
-
       <button class="hamburger" id="hamburger-btn" aria-label="Ouvrir le menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-
     </div>
   </header>
 
   <main>
-    <section class="info-section" aria-label="Pathologies Oculaires Générales">
 
-      <div class="info-section-title">
-        <h2>Pathologies Oculaires Générales</h2>
-        <div class="section-rule" aria-hidden="true"></div>
-      </div>
-
-      <div class="info-grid">
-
-        <article class="info-card">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-                 stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M12 8v4l3 3"/>
-              <circle cx="12" cy="12" r="3" stroke-dasharray="2 2"/>
-            </svg>
-          </div>
-          <h3>Glaucome</h3>
-          <p>
-            Le glaucome est une neuropathie optique caractérisée par une augmentation de la pression intraoculaire qui endommage progressivement le nerf optique. Souvent asymptomatique au départ, il peut entraîner une perte irréversible du champ visuel. Un dépistage régulier est indispensable, surtout après 40 ans ou en cas d'antécédents familiaux.
-          </p>
-          <a href="#" class="btn-learn">
-            En savoir plus
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                 stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12H19M13 6l6 6-6 6"/>
-            </svg>
-          </a>
-        </article>
-
-        <article class="info-card">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-                 stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="5"/>
-              <circle cx="12" cy="12" r="9" stroke-opacity="0.3"/>
-              <path d="M12 3v2M12 19v2M3 12h2M19 12h2"/>
-            </svg>
-          </div>
-          <h3>Cataracte</h3>
-          <p>
-            La cataracte est l'opacification progressive du cristallin, entraînant une baisse de la vision, des éblouissements et une altération des contrastes. Principalement liée au vieillissement, elle peut aussi survenir chez l'enfant ou suite à un traumatisme. Le traitement est chirurgical et consiste à remplacer le cristallin opacifié par un implant artificiel.
-          </p>
-          <a href="#" class="btn-learn">
-            En savoir plus
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                 stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12H19M13 6l6 6-6 6"/>
-            </svg>
-          </a>
-        </article>
-
-        <article class="info-card">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-                 stroke-linecap="round" stroke-linejoin="round">
-              <path d="M2 12C2 12 5 5 12 5C19 5 22 12 22 12C22 12 19 19 12 19C5 19 2 12 2 12Z"/>
-              <circle cx="12" cy="12" r="3"/>
-              <circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/>
-            </svg>
-          </div>
-          <h3>DMLA</h3>
-          <p>
-            La Dégénérescence Maculaire Liée à l'Âge (DMLA) affecte la macula, zone centrale de la rétine responsable de la vision fine. Elle se manifeste par une déformation ou un scotome central. Deux formes existent : sèche (atrophique) et humide (néovasculaire). La forme humide peut bénéficier d'injections intravitréennes d'anti-VEGF pour freiner son évolution.
-          </p>
-          <a href="#" class="btn-learn">
-            En savoir plus
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                 stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12H19M13 6l6 6-6 6"/>
-            </svg>
-          </a>
-        </article>
-
-        <article class="info-card">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-                 stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 3C7 3 3 7 3 12s4 9 9 9 9-4 9-9"/>
-              <path d="M16 3h5v5"/>
-              <path d="M21 3l-7 7"/>
-            </svg>
-          </div>
-          <h3>Dystrophies Héréditaires de la Rétine</h3>
-          <p>
-            Les dystrophies héréditaires de la rétine regroupent un ensemble de maladies génétiques rares (rétinite pigmentaire, maladie de Stargardt…) touchant les photorécepteurs. Elles se traduisent par une perte progressive de la vision périphérique ou centrale. Un bilan génétique et un suivi spécialisé permettent une prise en charge adaptée et un accès aux thérapies innovantes.
-          </p>
-          <a href="#" class="btn-learn">
-            En savoir plus
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                 stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12H19M13 6l6 6-6 6"/>
-            </svg>
-          </a>
-        </article>
-
-        <article class="info-card">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-                 stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <circle cx="12" cy="12" r="4"/>
-              <path d="M4.9 4.9l2.8 2.8M16.2 16.2l2.8 2.8M4.9 19.1l2.8-2.8M16.2 7.8l2.8-2.8"/>
-            </svg>
-          </div>
-          <h3>Uvéite</h3>
-          <p>
-            L'uvéite est une inflammation de l'uvée (iris, corps ciliaire, choroïde) pouvant être d'origine infectieuse, auto-immune ou idiopathique. Elle se manifeste par un œil rouge et douloureux, une photophobie et une baisse visuelle. Un diagnostic précis et un traitement rapide sont essentiels pour éviter les séquelles fonctionnelles graves.
-          </p>
-          <a href="#" class="btn-learn">
-            En savoir plus
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                 stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12H19M13 6l6 6-6 6"/>
-            </svg>
-          </a>
-        </article>
-
-        <article class="info-card">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-                 stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2C6 9 4 13 4 16a8 8 0 0 0 16 0c0-3-2-7-8-14z"/>
-              <circle cx="12" cy="16" r="2"/>
-              <path d="M12 12v2"/>
-            </svg>
-          </div>
-          <h3>Rétinopathie diabétique</h3>
-          <p>
-            La rétinopathie diabétique est une complication microvasculaire du diabète touchant les capillaires rétiniens. Elle évolue en plusieurs stades, jusqu'à une forme proliférante pouvant entraîner une cécité. Le contrôle glycémique, le suivi régulier par fond d'œil et, si nécessaire, le laser ou les injections intravitréennes permettent de prévenir une aggravation sévère.
-          </p>
-          <a href="#" class="btn-learn">
-            En savoir plus
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                 stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12H19M13 6l6 6-6 6"/>
-            </svg>
-          </a>
-        </article>
-
+    <section class="page-hero" aria-label="Introduction">
+      <div class="page-hero-inner">
+        <span class="page-hero-label">Maladies oculaires</span>
+        <h1><em>Pathologies</em> Oculaires</h1>
+        <div class="page-hero-rule" aria-hidden="true"></div>
+        <p>
+          Beaucoup de maladies oculaires évoluent sans douleur ni symptôme perceptible
+          jusqu'à un stade avancé. La connaissance de ces pathologies et un suivi régulier
+          sont les meilleures armes pour préserver votre capital visuel.
+        </p>
       </div>
     </section>
+
+    <section class="editorial-section" aria-label="Pathologies détaillées">
+
+      <!-- 01 Glaucome -->
+      <div class="editorial-block">
+        <div class="editorial-number" aria-hidden="true"><span>01 — Glaucome</span></div>
+        <div class="editorial-text">
+          <span class="editorial-badge">Neuropathie optique</span>
+          <h2>Glaucome<br><em>Le voleur silencieux de la vue</em></h2>
+          <p>
+            Le glaucome regroupe un ensemble de neuropathies optiques caractérisées par
+            une destruction progressive des fibres du nerf optique, le plus souvent liée
+            à une élévation de la pression intraoculaire. La perte du champ visuel débute
+            en périphérie et reste invisible jusqu'à un stade très avancé.
+          </p>
+          <p>
+            Sans traitement, le glaucome évolue inexorablement vers la cécité. Or un
+            diagnostic précoce permet dans la quasi-totalité des cas de stabiliser la maladie
+            grâce à un traitement local (collyres) ou chirurgical (trabéculectomie, implants).
+          </p>
+          <ul class="editorial-list">
+            <li>Facteurs de risque : <strong>pression oculaire élevée</strong>, âge, antécédents familiaux</li>
+            <li>Dépistage par <strong>tonométrie, champ visuel et OCT</strong> du nerf optique</li>
+            <li>Traitement : <strong>collyres hypotonisants</strong> en première intention</li>
+            <li>Surveillance à vie — pathologie <strong>non guérissable mais contrôlable</strong></li>
+          </ul>
+        </div>
+        <div class="editorial-visual" aria-hidden="true">
+          <svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Champ visuel avec scotome périphérique -->
+            <circle cx="110" cy="110" r="85" fill="#eef6fc" opacity="0.3" stroke="#3a7bbf" stroke-width="1" opacity="0.3"/>
+            <!-- Zone de vision normale (centre) -->
+            <circle cx="110" cy="110" r="50" fill="#3a7bbf" opacity="0.18"/>
+            <!-- Scotome périphérique — zones sombres -->
+            <path d="M110 25 A85 85 0 0 1 185 68 L155 78 A55 55 0 0 0 110 55 Z" fill="#1a3557" opacity="0.55"/>
+            <path d="M185 152 A85 85 0 0 1 110 195 L110 165 A55 55 0 0 0 160 135 Z" fill="#1a3557" opacity="0.5"/>
+            <path d="M35 68 A85 85 0 0 1 62 35 L78 60 A55 55 0 0 0 58 80 Z" fill="#1a3557" opacity="0.45"/>
+            <!-- Point de fixation central -->
+            <circle cx="110" cy="110" r="8" fill="#3a7bbf" opacity="0.7"/>
+            <circle cx="110" cy="110" r="3" fill="#d6eaf8"/>
+            <!-- Légende -->
+            <rect x="30" y="185" width="12" height="12" rx="2" fill="#3a7bbf" opacity="0.5"/>
+            <text x="47" y="195" font-family="'Lato',Arial,sans-serif" font-size="8" fill="#4a6080">Vision conservée</text>
+            <rect x="110" y="185" width="12" height="12" rx="2" fill="#1a3557" opacity="0.6"/>
+            <text x="127" y="195" font-family="'Lato',Arial,sans-serif" font-size="8" fill="#4a6080">Scotome</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- 02 Cataracte — illustration gauche -->
+      <div class="editorial-block reverse">
+        <div class="editorial-number" aria-hidden="true"><span>02 — Cataracte</span></div>
+        <div class="editorial-visual" aria-hidden="true">
+          <svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Cristallin normal vs opacifié -->
+            <!-- Œil gauche — cristallin clair -->
+            <ellipse cx="68" cy="100" rx="26" ry="38" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" fill="rgba(214,234,248,0.08)"/>
+            <ellipse cx="68" cy="100" rx="14" ry="22" stroke="rgba(91,159,214,0.7)" stroke-width="2" fill="rgba(91,159,214,0.12)"/>
+            <text x="68" y="148" text-anchor="middle" font-family="'Lato',Arial,sans-serif" font-size="7.5" fill="rgba(255,255,255,0.45)">Normal</text>
+            <!-- Flèche -->
+            <path d="M100 100 L120 100" stroke="rgba(255,255,255,0.35)" stroke-width="1.5" stroke-dasharray="3 2"/>
+            <polygon points="120,100 115,97 115,103" fill="rgba(255,255,255,0.4)"/>
+            <!-- Œil droit — cristallin opacifié -->
+            <ellipse cx="152" cy="100" rx="26" ry="38" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" fill="rgba(214,234,248,0.08)"/>
+            <ellipse cx="152" cy="100" rx="14" ry="22" stroke="rgba(91,159,214,0.5)" stroke-width="2" fill="rgba(26,53,87,0.5)"/>
+            <!-- Opacification -->
+            <ellipse cx="150" cy="96" rx="9" ry="12" fill="rgba(255,255,255,0.25)" opacity="0.8"/>
+            <ellipse cx="156" cy="108" rx="6" ry="8" fill="rgba(255,255,255,0.2)" opacity="0.7"/>
+            <text x="152" y="148" text-anchor="middle" font-family="'Lato',Arial,sans-serif" font-size="7.5" fill="rgba(255,255,255,0.45)">Cataracte</text>
+            <!-- Implant schématique (chirurgie) -->
+            <ellipse cx="110" cy="172" rx="30" ry="16" stroke="rgba(91,159,214,0.6)" stroke-width="2" fill="rgba(91,159,214,0.1)"/>
+            <line x1="80" y1="172" x2="65" y2="160" stroke="rgba(91,159,214,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="140" y1="172" x2="155" y2="160" stroke="rgba(91,159,214,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+            <text x="110" y="175" text-anchor="middle" font-family="'Lato',Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.5)">Implant LIO</text>
+            <text x="110" y="20" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="rgba(255,255,255,0.4)" font-style="italic">Opacification du cristallin</text>
+          </svg>
+        </div>
+        <div class="editorial-text">
+          <span class="editorial-badge">Chirurgie programmée</span>
+          <h2>Cataracte<br><em>Retrouver la transparence</em></h2>
+          <p>
+            La cataracte est l'opacification progressive du cristallin — le cristal naturel
+            de l'œil. Elle entraîne une baisse de la vision, une sensibilité accrue à
+            l'éblouissement et un voile laiteux altérant les contrastes. Elle touche principalement
+            les personnes de plus de 60 ans, mais peut survenir à tout âge.
+          </p>
+          <p>
+            Le traitement est exclusivement chirurgical : la phacoémulsification remplace
+            le cristallin opacifié par un implant artificiel (LIO) en une intervention
+            ambulatoire de 15 minutes, sous anesthésie locale. Les résultats visuels
+            sont généralement excellents dès le lendemain de l'opération.
+          </p>
+          <ul class="editorial-list">
+            <li>Première cause de <strong>chirurgie réglée</strong> en France</li>
+            <li>Intervention <strong>ambulatoire</strong>, sans hospitalisation</li>
+            <li>Choix d'implant adapté à votre mode de vie (<strong>multifocal, torique</strong>)</li>
+            <li>Récupération visuelle en <strong>24–48 heures</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 03 DMLA — texte gauche -->
+      <div class="editorial-block">
+        <div class="editorial-number" aria-hidden="true"><span>03 — DMLA</span></div>
+        <div class="editorial-text">
+          <span class="editorial-badge">Rétine centrale</span>
+          <h2>Dégénérescence Maculaire<br><em>Liée à l'Âge (DMLA)</em></h2>
+          <p>
+            La DMLA est une atteinte dégénérative de la macula — zone centrale de la rétine
+            qui permet la vision fine, la lecture et la reconnaissance des visages. Elle est
+            la première cause de malvoyance après 50 ans en France, touchant environ
+            1,5 million de personnes.
+          </p>
+          <p>
+            La forme sèche (atrophique) évolue lentement. La forme humide (néovasculaire),
+            plus agressive, est caractérisée par la croissance de néovaisseaux sous-rétiniens
+            qui peuvent provoquer une perte visuelle centrale rapide si non traitée.
+            Les injections intravitréennes d'anti-VEGF, très efficaces, doivent être
+            initiées rapidement.
+          </p>
+          <ul class="editorial-list">
+            <li>Symptômes : <strong>vision déformée</strong> (métamorphopsies), scotome central</li>
+            <li>Test d'Amsler à réaliser <strong>régulièrement</strong> chez les patients à risque</li>
+            <li>Traitement de la forme humide : <strong>injections anti-VEGF</strong></li>
+            <li>Supplémentation en <strong>antioxydants AREDS2</strong> pour la forme sèche</li>
+          </ul>
+        </div>
+        <div class="editorial-visual" aria-hidden="true">
+          <svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Grille d'Amsler déformée -->
+            <g opacity="0.6">
+              <!-- Grille normale en périphérie -->
+              <line x1="50" y1="50" x2="170" y2="50"  stroke="#3a7bbf" stroke-width="1" opacity="0.4"/>
+              <line x1="50" y1="75" x2="170" y2="75"  stroke="#3a7bbf" stroke-width="1" opacity="0.4"/>
+              <!-- Lignes déformées au centre -->
+              <path d="M50 100 Q80 88 110 82 Q140 88 170 100" stroke="#3a7bbf" stroke-width="1.5" fill="none" opacity="0.7"/>
+              <path d="M50 125 Q82 130 110 122 Q138 130 170 125" stroke="#3a7bbf" stroke-width="1.5" fill="none" opacity="0.7"/>
+              <line x1="50" y1="150" x2="170" y2="150" stroke="#3a7bbf" stroke-width="1" opacity="0.4"/>
+              <line x1="50" y1="170" x2="170" y2="170" stroke="#3a7bbf" stroke-width="1" opacity="0.4"/>
+              <!-- Colonnes -->
+              <line x1="50"  y1="50" x2="50"  y2="170" stroke="#3a7bbf" stroke-width="1" opacity="0.4"/>
+              <line x1="80"  y1="50" x2="74"  y2="170" stroke="#3a7bbf" stroke-width="1" opacity="0.4"/>
+              <path d="M110 50 Q102 90 110 110 Q118 130 110 170" stroke="#3a7bbf" stroke-width="1.5" fill="none" opacity="0.7"/>
+              <line x1="140" y1="50" x2="146" y2="170" stroke="#3a7bbf" stroke-width="1" opacity="0.4"/>
+              <line x1="170" y1="50" x2="170" y2="170" stroke="#3a7bbf" stroke-width="1" opacity="0.4"/>
+            </g>
+            <!-- Scotome central (zone floue) -->
+            <ellipse cx="110" cy="110" rx="28" ry="22" fill="#1a3557" opacity="0.5"/>
+            <ellipse cx="110" cy="110" rx="18" ry="14" fill="#1a3557" opacity="0.35"/>
+            <!-- Point de fixation -->
+            <circle cx="110" cy="110" r="3" fill="rgba(91,159,214,0.4)"/>
+            <text x="110" y="200" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#4a6080" opacity="0.7" font-style="italic">Grille d'Amsler — déformations centrales</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- 04 Dystrophies — illustration gauche -->
+      <div class="editorial-block reverse">
+        <div class="editorial-number" aria-hidden="true"><span>04 — Dystrophies</span></div>
+        <div class="editorial-visual" aria-hidden="true">
+          <svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Électrorétinogramme stylisé -->
+            <rect x="30" y="40" width="160" height="110" rx="4" fill="rgba(26,53,87,0.6)" stroke="rgba(91,159,214,0.3)" stroke-width="1.5"/>
+            <!-- Signal ERG normal en haut -->
+            <path d="M40 75 L65 75 L70 60 L75 90 L80 65 L85 75 L120 75 L125 55 L130 95 L135 70 L140 75 L175 75"
+                  stroke="rgba(91,159,214,0.8)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Ligne de base -->
+            <line x1="35" y1="75" x2="185" y2="75" stroke="rgba(255,255,255,0.1)" stroke-width="1" stroke-dasharray="3 2"/>
+            <!-- Signal ERG atténué en bas (dystrophie) -->
+            <path d="M40 120 L75 120 L78 115 L82 125 L86 120 L150 120 L153 113 L158 127 L162 120 L175 120"
+                  stroke="rgba(91,159,214,0.35)" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="35" y1="120" x2="185" y2="120" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="3 2"/>
+            <!-- Étiquettes -->
+            <text x="40" y="58" font-family="'Lato',Arial,sans-serif" font-size="7.5" fill="rgba(91,159,214,0.8)" font-weight="700">ERG normal</text>
+            <text x="40" y="108" font-family="'Lato',Arial,sans-serif" font-size="7.5" fill="rgba(91,159,214,0.45)">Dystrophie</text>
+            <!-- Spirale ADN stylisée -->
+            <path d="M110 160 Q118 165 110 172 Q102 179 110 186" stroke="rgba(91,159,214,0.5)" stroke-width="2" fill="none"/>
+            <path d="M110 160 Q102 165 110 172 Q118 179 110 186" stroke="rgba(214,234,248,0.4)" stroke-width="1.5" fill="none"/>
+            <line x1="104" y1="163" x2="116" y2="163" stroke="rgba(91,159,214,0.4)" stroke-width="1" stroke-linecap="round"/>
+            <line x1="102" y1="169" x2="118" y2="169" stroke="rgba(91,159,214,0.3)" stroke-width="1" stroke-linecap="round"/>
+            <line x1="104" y1="175" x2="116" y2="175" stroke="rgba(91,159,214,0.4)" stroke-width="1" stroke-linecap="round"/>
+            <line x1="102" y1="181" x2="118" y2="181" stroke="rgba(91,159,214,0.3)" stroke-width="1" stroke-linecap="round"/>
+            <text x="110" y="208" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="rgba(255,255,255,0.4)" font-style="italic">Électrorétinogramme</text>
+          </svg>
+        </div>
+        <div class="editorial-text">
+          <span class="editorial-badge">Maladies génétiques rares</span>
+          <h2>Dystrophies Héréditaires<br><em>de la Rétine</em></h2>
+          <p>
+            Les dystrophies héréditaires de la rétine (DHR) regroupent plus de 270 maladies
+            génétiques rares affectant les photorécepteurs ou l'épithélium pigmentaire rétinien.
+            Les plus fréquentes sont la rétinite pigmentaire, la maladie de Stargardt
+            et la dystrophie des cônes-bâtonnets.
+          </p>
+          <p>
+            L'évolution est progressive et conduit à une réduction du champ visuel
+            (vision tubulaire) ou à une atteinte centrale. Si aucun traitement curatif
+            général n'existe à ce jour, des thérapies géniques ciblant certaines mutations
+            sont disponibles ou en cours d'essai clinique pour plusieurs formes.
+          </p>
+          <ul class="editorial-list">
+            <li>Diagnostic par <strong>électrorétinogramme (ERG)</strong> et OCT</li>
+            <li>Bilan génétique pour identifier la <strong>mutation causale</strong></li>
+            <li>Thérapie génique disponible pour <strong>RPE65 (Luxturna)</strong></li>
+            <li>Suivi dans un <strong>centre de référence maladies rares</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 05 Uvéite — texte gauche -->
+      <div class="editorial-block">
+        <div class="editorial-number" aria-hidden="true"><span>05 — Uvéite</span></div>
+        <div class="editorial-text">
+          <span class="editorial-badge">Inflammation intraoculaire</span>
+          <h2>Uvéite<br><em>Inflammation de l'uvée</em></h2>
+          <p>
+            L'uvéite est une inflammation de l'uvée, la tunique vasculaire de l'œil comprenant
+            l'iris, le corps ciliaire et la choroïde. Elle peut être antérieure (iritis),
+            intermédiaire (cyclite) ou postérieure (choroïdite), et constitue une urgence
+            ophtalmologique dès lors qu'elle entraîne une baisse visuelle.
+          </p>
+          <p>
+            Son origine est infectieuse (herpès, toxoplasmose, tuberculose) dans un tiers
+            des cas, auto-immune (sarcoïdose, spondylarthrite, maladie de Crohn) dans un autre
+            tiers, et idiopathique dans le reste. Le bilan étiologique guide le traitement
+            spécifique, toujours associé à une corticothérapie locale ou générale.
+          </p>
+          <ul class="editorial-list">
+            <li>Signes d'alarme : <strong>œil rouge douloureux</strong>, photophobie, myodésopsies</li>
+            <li>Bilan étiologique : <strong>sérologies, immunologie, imagerie</strong></li>
+            <li>Traitement : <strong>corticostéroïdes</strong> ± immunosuppresseurs</li>
+            <li>Risque de complications : <strong>cataracte, hypertonie, œdème maculaire</strong></li>
+          </ul>
+        </div>
+        <div class="editorial-visual" aria-hidden="true">
+          <svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Œil rouge / enflammé -->
+            <ellipse cx="110" cy="110" rx="88" ry="55" stroke="#3a7bbf" stroke-width="1.5" fill="#eef6fc" opacity="0.3"/>
+            <!-- Rougeur conjonctivale -->
+            <ellipse cx="110" cy="110" rx="88" ry="55" fill="rgba(58,123,191,0.08)"/>
+            <!-- Vaisseaux dilatés -->
+            <path d="M30 100 Q55 95 75 105" stroke="rgba(26,53,87,0.5)" stroke-width="1.5" fill="none"/>
+            <path d="M28 118 Q52 122 72 115" stroke="rgba(26,53,87,0.4)" stroke-width="1.2" fill="none"/>
+            <path d="M190 100 Q165 95 148 105" stroke="rgba(26,53,87,0.5)" stroke-width="1.5" fill="none"/>
+            <path d="M192 118 Q168 122 148 115" stroke="rgba(26,53,87,0.4)" stroke-width="1.2" fill="none"/>
+            <!-- Cornée -->
+            <circle cx="110" cy="110" r="32" stroke="#1a3557" stroke-width="1.5" fill="rgba(214,234,248,0.3)"/>
+            <!-- Hypopion (sédimentation cellulaire) -->
+            <path d="M85 128 Q110 132 135 128 L135 122 Q110 126 85 122 Z" fill="rgba(26,53,87,0.4)"/>
+            <!-- Pupille irrégulière (synéchies) -->
+            <path d="M110 98 Q118 104 122 110 Q118 116 110 122 Q100 116 98 110 Q100 104 110 98 Z"
+                  fill="#1a3557" opacity="0.8" stroke="#3a7bbf" stroke-width="0.5"/>
+            <!-- Reflet cornéen -->
+            <ellipse cx="100" cy="100" rx="7" ry="5" fill="rgba(255,255,255,0.2)" transform="rotate(-30,100,100)"/>
+            <text x="110" y="186" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#4a6080" opacity="0.7" font-style="italic">Uvéite antérieure — hypopion</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- 06 Rétinopathie diabétique — illustration gauche -->
+      <div class="editorial-block reverse">
+        <div class="editorial-number" aria-hidden="true"><span>06 — Rétinopathie</span></div>
+        <div class="editorial-visual" aria-hidden="true">
+          <svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Fond d'œil diabétique stades -->
+            <circle cx="110" cy="105" r="82" fill="rgba(26,53,87,0.3)" stroke="rgba(91,159,214,0.25)" stroke-width="1.5"/>
+            <!-- Disque optique -->
+            <ellipse cx="148" cy="92" rx="13" ry="17" fill="rgba(214,234,248,0.5)" stroke="rgba(91,159,214,0.6)" stroke-width="1.5"/>
+            <!-- Macula -->
+            <circle cx="80" cy="108" r="16" stroke="rgba(91,159,214,0.3)" stroke-width="1" fill="none" stroke-dasharray="2 2"/>
+            <!-- Néovaisseaux (rétinopathie proliférante) -->
+            <path d="M148 92 C135 88 118 82 95 95 Q80 102 80 108" stroke="rgba(91,159,214,0.6)" stroke-width="2" fill="none"/>
+            <path d="M148 92 C140 102 128 114 108 122 Q94 128 85 124" stroke="rgba(91,159,214,0.5)" stroke-width="1.5" fill="none"/>
+            <!-- Microanévrysmes -->
+            <circle cx="100" cy="100" r="3.5" fill="rgba(26,53,87,0.8)"/>
+            <circle cx="92"  cy="115" r="3"   fill="rgba(26,53,87,0.7)"/>
+            <circle cx="115" cy="108" r="3"   fill="rgba(26,53,87,0.7)"/>
+            <circle cx="72"  cy="100" r="2.5" fill="rgba(26,53,87,0.65)"/>
+            <circle cx="125" cy="95"  r="2.5" fill="rgba(26,53,87,0.6)"/>
+            <!-- Hémorragies en flammèches -->
+            <path d="M105 118 L100 130 L108 126 L104 138" stroke="rgba(26,53,87,0.6)" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <!-- Exsudats durs -->
+            <ellipse cx="68"  cy="100" rx="7" ry="4.5" fill="rgba(214,234,248,0.7)"/>
+            <ellipse cx="95"  cy="130" rx="5" ry="3.5" fill="rgba(214,234,248,0.65)"/>
+            <ellipse cx="118" cy="128" rx="4" ry="3"   fill="rgba(214,234,248,0.6)"/>
+            <text x="110" y="205" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="rgba(255,255,255,0.4)" font-style="italic">Rétinopathie diabétique proliférante</text>
+          </svg>
+        </div>
+        <div class="editorial-text">
+          <span class="editorial-badge">Complication du diabète</span>
+          <h2>Rétinopathie Diabétique<br><em>Surveiller pour préserver</em></h2>
+          <p>
+            La rétinopathie diabétique est une complication microvasculaire du diabète
+            touchant les capillaires rétiniens. Elle survient chez environ 50 % des diabétiques
+            après 15 ans d'évolution de la maladie, et constitue la première cause de cécité
+            évitable chez l'adulte en âge de travailler.
+          </p>
+          <p>
+            L'évolution est silencieuse : microanévrysmes, hémorragies et exsudats précèdent
+            l'œdème maculaire ou la rétinopathie proliférante, stades qui peuvent compromettre
+            définitivement la vision. Le contrôle glycémique strict reste le pilier de la
+            prévention, associé à un suivi ophtalmologique annuel.
+          </p>
+          <ul class="editorial-list">
+            <li>Dépistage annuel obligatoire pour tout <strong>patient diabétique</strong></li>
+            <li>Traitement de l'<strong>œdème maculaire</strong> : injections anti-VEGF</li>
+            <li>Photocoagulation laser pour <strong>rétinopathie proliférante</strong></li>
+            <li>Corrélation étroite avec l'<strong>équilibre glycémique (HbA1c)</strong></li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="page-cta" aria-label="Prendre rendez-vous">
+      <div class="page-cta-inner">
+        <h2>Un symptôme vous inquiète ?</h2>
+        <p>Ne différez pas. La plupart des pathologies oculaires se traitent d'autant mieux qu'elles sont dépistées tôt. Prenez rendez-vous sans attendre.</p>
+        <div class="page-cta-buttons">
+          <a href="tel:0139139191" class="btn-cta-phone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.95 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012.88 2h3a2 2 0 012 1.72c.127.96.36 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Appeler le 01.39.13.91.91
+          </a>
+          <a href="index.html#infos-pratiques" class="btn-cta-rdv">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Prendre rendez-vous
+          </a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer>
-    <p>
-      © 2025 <span>Ophtao — Dr Mégret & Associés</span>  • 
-      60 rue Hoche, 78800 Houilles  • 
-      Cabinet conventionné secteur 1
-    </p>
-    <p style="margin-top: 6px;">
-      Mentions légales  •  Politique de confidentialité  • 
-      Site réalisé par le cabinet
-    </p>
+    <p>© 2025 <span>Ophtao — Dr Mégret & Associés</span>  •  60 rue Hoche, 78800 Houilles  •  Cabinet conventionné secteur 1</p>
+    <p style="margin-top:6px">Mentions légales  •  Politique de confidentialité  •  Site réalisé par le cabinet</p>
   </footer>
 
   <script>
-    (function () 
-    {
-      const btn = document.getElementById('hamburger-btn');
-      const nav = document.getElementById('main-nav');
-      if (!btn || !nav) return;
-      btn.addEventListener('click', function () 
-      {
-        const isOpen = nav.classList.toggle('open');
-        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        const spans = btn.querySelectorAll('span');
-        if (isOpen) 
-        {
-          spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-          spans[1].style.opacity  = '0';
-          spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
-        } 
-        
-        else 
-        {
-          spans[0].style.transform = '';
-          spans[1].style.opacity   = '';
-          spans[2].style.transform = '';
-        }
-      });
-      const dropdownToggle = nav.querySelector('.nav-dropdown > a.nav-more');
-      if (dropdownToggle) {
-        dropdownToggle.addEventListener('click', function (e) 
-        {
-          if (window.innerWidth <= 680) 
-          {
-            e.preventDefault();
-            dropdownToggle.closest('.nav-dropdown').classList.toggle('mobile-open');
-          }
-        });
-      }
-      nav.querySelectorAll('a:not(.nav-more)').forEach(function (link) 
-      {
-        link.addEventListener('click', function () 
-        {
-          nav.classList.remove('open');
-          btn.setAttribute('aria-expanded', 'false');
-          const spans = btn.querySelectorAll('span');
-          spans[0].style.transform = '';
-          spans[1].style.opacity   = '';
-          spans[2].style.transform = '';
-        });
-      });
-    })();
+    (function(){const b=document.getElementById('hamburger-btn'),n=document.getElementById('main-nav');if(!b||!n)return;b.addEventListener('click',function(){const o=n.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');const s=b.querySelectorAll('span');if(o){s[0].style.transform='rotate(45deg) translate(5px,5px)';s[1].style.opacity='0';s[2].style.transform='rotate(-45deg) translate(5px,-5px)';}else{s[0].style.transform='';s[1].style.opacity='';s[2].style.transform='';}});const d=n.querySelector('.nav-dropdown > a.nav-more');if(d)d.addEventListener('click',function(e){if(window.innerWidth<=680){e.preventDefault();d.closest('.nav-dropdown').classList.toggle('mobile-open');}});n.querySelectorAll('a:not(.nav-more)').forEach(function(l){l.addEventListener('click',function(){n.classList.remove('open');b.setAttribute('aria-expanded','false');const s=b.querySelectorAll('span');s[0].style.transform='';s[1].style.opacity='';s[2].style.transform='';});});})();
   </script>
-
 </body>
 </html>
