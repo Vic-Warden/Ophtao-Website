@@ -3,13 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plateau technique — Ophtao</title>
+  <title>Consultation Ophtalmologique — Ophtao</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    @media (min-width: 901px) 
+    {
+      .info-grid.grid-5 
+      {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .info-grid.grid-5 .info-card:nth-child(4) 
+      {
+        grid-column: 1;
+        margin-left: auto;
+        margin-right: 0;
+        width: 100%;
+      }
+      .info-grid.grid-5 .info-card:nth-child(4),
+      .info-grid.grid-5 .info-card:nth-child(5) 
+      {
+        grid-column: auto;
+      }
+      .info-grid.grid-5::after 
+      {
+        content: none;
+      }
+      .info-grid.grid-5 
+      {
+        grid-template-columns: repeat(6, 1fr);
+      }
+      .info-grid.grid-5 .info-card:nth-child(1) { grid-column: 1 / 3; }
+      .info-grid.grid-5 .info-card:nth-child(2) { grid-column: 3 / 5; }
+      .info-grid.grid-5 .info-card:nth-child(3) { grid-column: 5 / 7; }
+      .info-grid.grid-5 .info-card:nth-child(4) { grid-column: 2 / 4; }
+      .info-grid.grid-5 .info-card:nth-child(5) { grid-column: 4 / 6; }
+    }
+  </style>
 </head>
 <body>
 
@@ -46,7 +80,7 @@
             <a href="technical-equipment.html">Plateau technique</a>
             <a href="consultation.html">Consultation Ophtalmologique</a>
             <a href="pathologies.html">Pathologies Oculaires Générales</a>
-            <a href="visual-correction.html">Correction des défauts visuels</a>
+            <a href="corrections.html">Correction des défauts visuels</a>
           </div>
         </div>
       </nav>
@@ -59,27 +93,26 @@
   </header>
 
   <main>
-    <section class="info-section" aria-label="Plateau technique">
+    <section class="info-section" aria-label="Consultation Ophtalmologique">
 
       <div class="info-section-title">
-        <h2>Plateau technique</h2>
+        <h2>Consultation Ophtalmologique</h2>
         <div class="section-rule" aria-hidden="true"></div>
       </div>
 
-      <div class="info-grid">
+      <div class="info-grid grid-5">
 
         <article class="info-card">
           <div class="card-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-                 stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="3"/>
+                 stroke-linecap="round" stroke-linejoin="round">
               <path d="M2 12C2 12 5 5 12 5C19 5 22 12 22 12C22 12 19 19 12 19C5 19 2 12 2 12Z"/>
-              <path d="M12 2v2M12 20v2M2 12H4M20 12h2"/>
+              <circle cx="12" cy="12" r="3"/>
             </svg>
           </div>
-          <h3>Angio OCT</h3>
+          <h3>Consultation Ophtalmologique</h3>
           <p>
-            L'Angio-OCT (Tomographie par Cohérence Optique angiographique) est un examen non invasif qui permet de visualiser la microvascularisation rétinienne en haute résolution, sans injection de colorant. Il est essentiel dans le diagnostic et le suivi de pathologies comme la DMLA, la rétinopathie diabétique ou les occlusions vasculaires.
+            La consultation standard comprend un bilan visuel complet : mesure de l'acuité visuelle, réfraction, examen du fond d'œil, mesure de la tension oculaire et analyse des annexes. Elle permet de dépister toute pathologie oculaire et d'adapter ou renouveler une correction optique.
           </p>
           <a href="#" class="btn-learn">
             En savoir plus
@@ -93,15 +126,15 @@
         <article class="info-card">
           <div class="card-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-                 stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3 3l18 18M3 21L21 3"/>
-              <rect x="8" y="8" width="8" height="8" rx="1"/>
-              <circle cx="12" cy="12" r="2"/>
+                 stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="7" r="4"/>
+              <path d="M5.5 20a7.5 7.5 0 0 1 13 0"/>
+              <path d="M9 11.5c0 1.5.5 3 3 3s3-1.5 3-3"/>
             </svg>
           </div>
-          <h3>Biomètre</h3>
+          <h3>Pédiatrie</h3>
           <p>
-            Le biomètre optique mesure avec précision la longueur axiale de l'œil, la courbure cornéenne et la profondeur de la chambre antérieure. Ces mesures sont indispensables pour calculer la puissance de l'implant intraoculaire avant une intervention de la cataracte, garantissant ainsi une récupération visuelle optimale.
+            La consultation pédiatrique est adaptée au jeune patient. Elle permet de détecter précocement amblyopie, strabisme, myopie évolutive ou autres troubles du développement visuel. Un dépistage et une prise en charge précoces sont essentiels pour garantir un développement visuel normal chez l'enfant.
           </p>
           <a href="#" class="btn-learn">
             En savoir plus
@@ -115,17 +148,58 @@
         <article class="info-card">
           <div class="card-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-                 stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="12" cy="12" rx="10" ry="5"/>
-              <ellipse cx="12" cy="12" rx="6" ry="3"/>
-              <ellipse cx="12" cy="12" rx="2" ry="1"/>
-              <line x1="12" y1="7" x2="12" y2="2"/>
-              <line x1="12" y1="17" x2="12" y2="22"/>
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C6 9 4 13 4 16a8 8 0 0 0 16 0c0-3-2-7-8-14z"/>
+              <path d="M8.5 16.5a4 4 0 0 0 7 0"/>
             </svg>
           </div>
-          <h3>Topographe Cornéen</h3>
+          <h3>Diabétique</h3>
           <p>
-            La topographie cornéenne cartographie avec une grande précision la surface de la cornée, révélant sa courbure et son irrégularité. Cet examen est essentiel pour dépister le kératocône, adapter des lentilles de contact spécialisées, ou préparer une chirurgie réfractive (LASIK, PRK). Il constitue un bilan préopératoire incontournable.
+            Le suivi ophtalmologique du patient diabétique est indispensable. La rétinopathie diabétique, complication fréquente du diabète, peut évoluer silencieusement vers la cécité. Notre cabinet propose un dépistage régulier par fond d'œil et angio-OCT pour surveiller et traiter toute atteinte rétinienne au plus tôt.
+          </p>
+          <a href="#" class="btn-learn">
+            En savoir plus
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12H19M13 6l6 6-6 6"/>
+            </svg>
+          </a>
+        </article>
+
+        <article class="info-card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
+          <h3>Lentille</h3>
+          <p>
+            La consultation lentilles comprend une évaluation de la topographie cornéenne et de la tear film pour sélectionner les lentilles les mieux adaptées à votre morphologie oculaire. Elle inclut l'apprentissage de la pose et de l'entretien, ainsi que le suivi régulier du port pour préserver la santé de votre cornée.
+          </p>
+          <a href="#" class="btn-learn">
+            En savoir plus
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12H19M13 6l6 6-6 6"/>
+            </svg>
+          </a>
+        </article>
+
+        <article class="info-card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+          </div>
+          <h3>Urgences</h3>
+          <p>
+            Notre cabinet prend en charge les urgences ophtalmologiques : œil rouge douloureux, baisse brutale de la vision, corps étranger, traumatisme oculaire, décollement de rétine présumé ou uvéite aiguë. En dehors des heures d'ouverture, nous vous orientons vers la structure d'urgence la plus adaptée.
           </p>
           <a href="#" class="btn-learn">
             En savoir plus
