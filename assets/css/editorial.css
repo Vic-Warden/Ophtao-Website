@@ -1,6 +1,6 @@
-
-/* ----- Page header éditorial ----- */
-.page-hero {
+/* Page hero header */
+.page-hero 
+{
   background: var(--navy);
   padding: 5rem 2rem 4rem;
   text-align: center;
@@ -8,8 +8,9 @@
   overflow: hidden;
 }
 
-/* Fond géométrique décoratif */
-.page-hero::before {
+/* Decorative geometric background */
+.page-hero::before 
+{
   content: '';
   position: absolute;
   inset: 0;
@@ -19,8 +20,9 @@
   pointer-events: none;
 }
 
-/* Lignes décoratives en coin (cohérence hero d'accueil) */
-.page-hero::after {
+/* Corner decorative lines */
+.page-hero::after 
+{
   content: '';
   position: absolute;
   top: 2rem;
@@ -32,7 +34,8 @@
   pointer-events: none;
 }
 
-.page-hero-inner {
+.page-hero-inner 
+{
   position: relative;
   z-index: 1;
   max-width: 760px;
@@ -40,8 +43,9 @@
   animation: fadeInUp 0.8s ease 0.1s both;
 }
 
-/* Catégorie au-dessus du titre */
-.page-hero-label {
+/* Pre-title category label */
+.page-hero-label 
+{
   display: inline-block;
   font-family: var(--font-sans);
   font-size: 0.68rem;
@@ -52,7 +56,8 @@
   margin-bottom: 1.2rem;
 }
 
-.page-hero h1 {
+.page-hero h1 
+{
   font-family: var(--font-display);
   font-size: clamp(2rem, 5vw, 3.4rem);
   font-weight: 700;
@@ -62,21 +67,24 @@
   margin-bottom: 1.4rem;
 }
 
-.page-hero h1 em {
+.page-hero h1 em 
+{
   font-style: italic;
   font-weight: 400;
   color: var(--sky);
 }
 
-/* Séparateur fin */
-.page-hero-rule {
+/* Thin separator */
+.page-hero-rule 
+{
   width: 56px;
   height: 2px;
   background: linear-gradient(90deg, transparent, var(--steel-light), transparent);
   margin: 0 auto 1.4rem;
 }
 
-.page-hero p {
+.page-hero p 
+{
   font-family: var(--font-sans);
   font-size: 1rem;
   line-height: 1.85;
@@ -84,15 +92,16 @@
   font-weight: 300;
 }
 
-/* ----- Conteneur principal éditorial ----- */
-.editorial-section {
+/* Main editorial container */
+.editorial-section 
+{
   background: var(--white);
   padding: 0;
 }
 
-/* ----- Bloc éditorial alterné ----- */
-/* Layout : numéro | texte | illustration  (ou inverse) */
-.editorial-block {
+/* Alternating editorial blocks (number | text | image) */
+.editorial-block 
+{
   display: grid;
   grid-template-columns: 64px 1fr 1fr;
   gap: 0;
@@ -102,16 +111,19 @@
   transition: background 0.3s ease;
 }
 
-.editorial-block:last-child {
+.editorial-block:last-child 
+{
   border-bottom: none;
 }
 
-.editorial-block:hover {
+.editorial-block:hover 
+{
   background: var(--off-white);
 }
 
-/* Colonne numéro — à gauche, fond navy */
-.editorial-number {
+/* Number column */
+.editorial-number 
+{
   background: var(--navy);
   display: flex;
   align-items: flex-start;
@@ -120,8 +132,9 @@
   position: relative;
 }
 
-/* Ligne verticale décorative */
-.editorial-number::after {
+/* Vertical decorative line */
+.editorial-number::after 
+{
   content: '';
   position: absolute;
   top: 4.5rem;
@@ -132,7 +145,8 @@
   transform: translateX(-50%);
 }
 
-.editorial-number span {
+.editorial-number span 
+{
   font-family: var(--font-display);
   font-size: 0.72rem;
   font-weight: 600;
@@ -144,16 +158,18 @@
   user-select: none;
 }
 
-/* Colonne texte */
-.editorial-text {
+/* Text column */
+.editorial-text 
+{
   padding: 4rem 3.5rem 4rem 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-/* Badge de spécialité */
-.editorial-badge {
+/* Specialty badge */
+.editorial-badge 
+{
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -166,7 +182,8 @@
   margin-bottom: 1.2rem;
 }
 
-.editorial-badge::before {
+.editorial-badge::before 
+{
   content: '';
   display: inline-block;
   width: 24px;
@@ -175,7 +192,8 @@
   border-radius: 2px;
 }
 
-.editorial-text h2 {
+.editorial-text h2 
+{
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 2.5vw, 2rem);
   font-weight: 700;
@@ -185,13 +203,15 @@
   letter-spacing: 0.01em;
 }
 
-.editorial-text h2 em {
+.editorial-text h2 em 
+{
   font-style: italic;
   font-weight: 400;
   color: var(--steel);
 }
 
-.editorial-text p {
+.editorial-text p 
+{
   font-family: var(--font-sans);
   font-size: 0.95rem;
   line-height: 1.88;
@@ -200,12 +220,14 @@
   margin-bottom: 1.2rem;
 }
 
-.editorial-text p:last-of-type {
+.editorial-text p:last-of-type 
+{
   margin-bottom: 0;
 }
 
-/* Points clés — liste soignée */
-.editorial-list {
+/* Key points list */
+.editorial-list 
+{
   list-style: none;
   margin-top: 1.6rem;
   display: flex;
@@ -213,7 +235,8 @@
   gap: 0.6rem;
 }
 
-.editorial-list li {
+.editorial-list li 
+{
   font-family: var(--font-sans);
   font-size: 0.88rem;
   color: var(--text-mid);
@@ -224,8 +247,9 @@
   line-height: 1.6;
 }
 
-/* Puce personnalisée */
-.editorial-list li::before {
+/* Custom list bullet */
+.editorial-list li::before 
+{
   content: '';
   display: inline-block;
   flex-shrink: 0;
@@ -236,14 +260,16 @@
   margin-top: 7px;
 }
 
-/* Étiquette "Symptômes" / "Traitements" dans les listes */
-.editorial-list li strong {
+/* Bold labels in lists */
+.editorial-list li strong 
+{
   color: var(--navy);
   font-weight: 700;
 }
 
-/* Colonne illustration */
-.editorial-visual {
+/* Image column */
+.editorial-visual 
+{
   background: var(--ice);
   display: flex;
   align-items: center;
@@ -253,8 +279,9 @@
   overflow: hidden;
 }
 
-/* Légère texture de fond */
-.editorial-visual::before {
+/* Light background texture */
+.editorial-visual::before 
+{
   content: '';
   position: absolute;
   inset: 0;
@@ -264,7 +291,8 @@
   pointer-events: none;
 }
 
-.editorial-visual svg {
+.editorial-visual svg 
+{
   width: min(220px, 70%);
   height: auto;
   position: relative;
@@ -273,47 +301,55 @@
   transition: opacity 0.3s, transform 0.3s;
 }
 
-.editorial-block:hover .editorial-visual svg {
+.editorial-block:hover .editorial-visual svg 
+{
   opacity: 1;
   transform: scale(1.03);
 }
 
-/* Variante inversée : illustration à gauche, texte à droite */
-.editorial-block.reverse {
+/* Reversed layout */
+.editorial-block.reverse 
+{
   grid-template-columns: 64px 1fr 1fr;
 }
 
-.editorial-block.reverse .editorial-number {
+.editorial-block.reverse .editorial-number 
+{
   order: 1;
 }
 
-.editorial-block.reverse .editorial-visual {
+.editorial-block.reverse .editorial-visual 
+{
   order: 2;
   background: var(--navy-deep);
 }
 
-.editorial-block.reverse .editorial-visual::before {
+.editorial-block.reverse .editorial-visual::before 
+{
   background:
     radial-gradient(circle at 30% 60%, rgba(91,159,214,0.12) 0%, transparent 50%),
     radial-gradient(circle at 70% 30%, rgba(255,255,255,0.03) 0%, transparent 50%);
 }
 
-.editorial-block.reverse .editorial-visual svg {
+.editorial-block.reverse .editorial-visual svg 
+{
   opacity: 0.7;
   filter: brightness(1.6);
 }
 
-.editorial-block.reverse:hover .editorial-visual svg {
+.editorial-block.reverse:hover .editorial-visual svg 
+{
   opacity: 0.9;
 }
 
-.editorial-block.reverse .editorial-text {
+.editorial-block.reverse .editorial-text 
+{
   order: 3;
 }
 
-/* ----- CTA de fin de page ----- */
-/* Bloc d'appel à l'action centré, fond navy-deep */
-.page-cta {
+/* Call to Action block */
+.page-cta 
+{
   background: var(--navy-deep);
   padding: 5rem 2rem;
   text-align: center;
@@ -321,7 +357,8 @@
   overflow: hidden;
 }
 
-.page-cta::before {
+.page-cta::before 
+{
   content: '';
   position: absolute;
   inset: 0;
@@ -333,14 +370,16 @@
   pointer-events: none;
 }
 
-.page-cta-inner {
+.page-cta-inner 
+{
   position: relative;
   z-index: 1;
   max-width: 640px;
   margin: 0 auto;
 }
 
-.page-cta h2 {
+.page-cta h2 
+{
   font-family: var(--font-display);
   font-size: clamp(1.4rem, 3vw, 2rem);
   font-weight: 600;
@@ -349,7 +388,8 @@
   letter-spacing: 0.01em;
 }
 
-.page-cta p {
+.page-cta p 
+{
   font-family: var(--font-sans);
   font-size: 0.92rem;
   color: rgba(255,255,255,0.55);
@@ -358,16 +398,18 @@
   line-height: 1.7;
 }
 
-/* Boutons CTA */
-.page-cta-buttons {
+/* CTA buttons container */
+.page-cta-buttons 
+{
   display: flex;
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-/* Bouton téléphone — outline blanc */
-.btn-cta-phone {
+/* Phone button */
+.btn-cta-phone 
+{
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -385,19 +427,22 @@
   text-decoration: none;
 }
 
-.btn-cta-phone:hover {
+.btn-cta-phone:hover 
+{
   background: rgba(255,255,255,0.08);
   border-color: rgba(255,255,255,0.7);
 }
 
-.btn-cta-phone svg {
+.btn-cta-phone svg 
+{
   width: 16px;
   height: 16px;
   flex-shrink: 0;
 }
 
-/* Bouton rendez-vous — plein acier */
-.btn-cta-rdv {
+/* Appointment button */
+.btn-cta-rdv 
+{
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -415,70 +460,81 @@
   text-decoration: none;
 }
 
-.btn-cta-rdv:hover {
+.btn-cta-rdv:hover 
+{
   background: var(--steel-light);
   border-color: var(--steel-light);
 }
 
-.btn-cta-rdv svg {
+.btn-cta-rdv svg 
+{
   width: 16px;
   height: 16px;
   flex-shrink: 0;
 }
 
-/* =============================================================
-   RESPONSIVE ÉDITORIAL
-   ============================================================= */
-
-/* Tablette : colonne numéro masquée, grille 1 col texte + 1 col image */
-@media (max-width: 960px) {
+/* Hide number column, 2-column grid */
+@media (max-width: 960px) 
+{
   .editorial-block,
-  .editorial-block.reverse {
+  .editorial-block.reverse 
+  {
     grid-template-columns: 1fr 1fr;
   }
 
-  .editorial-number {
+  .editorial-number 
+  {
     display: none;
   }
 
-  .editorial-block.reverse .editorial-visual {
+  .editorial-block.reverse .editorial-visual 
+  {
     order: 1;
   }
 
-  .editorial-block.reverse .editorial-text {
+  .editorial-block.reverse .editorial-text 
+  {
     order: 2;
   }
 
-  .editorial-text {
+  .editorial-text 
+  {
     padding: 3rem 2.5rem;
   }
 }
 
-/* Mobile : empilement vertical */
-@media (max-width: 640px) {
+/* Mobile: vertical stacking */
+@media (max-width: 640px) 
+{
   .editorial-block,
-  .editorial-block.reverse {
+  .editorial-block.reverse 
+  {
     grid-template-columns: 1fr;
   }
 
-  .editorial-visual {
+  .editorial-visual 
+  {
     min-height: 200px;
     padding: 2.5rem;
   }
 
-  .editorial-visual svg {
+  .editorial-visual svg 
+  {
     width: min(160px, 55%);
   }
 
-  .editorial-text {
+  .editorial-text 
+  {
     padding: 2.5rem 1.5rem;
   }
 
-  .page-hero {
+  .page-hero 
+  {
     padding: 3.5rem 1.5rem 3rem;
   }
 
-  .page-cta {
+  .page-cta 
+  {
     padding: 3.5rem 1.5rem;
   }
 }

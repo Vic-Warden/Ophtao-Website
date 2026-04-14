@@ -4,10 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pathologies Oculaires — Ophtao</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
   <link rel="stylesheet" href="assets/css/editorial.css" />
 </head>
 <body>
@@ -32,6 +36,7 @@
           <div class="tagline">Dr Mégret & Associés</div>
         </div>
       </a>
+      
       <nav id="main-nav" role="navigation" aria-label="Navigation principale">
         <a href="index.html">Page d'accueil</a>
         <a href="index.html#infos-pratiques">Le cabinet</a>
@@ -46,6 +51,7 @@
           </div>
         </div>
       </nav>
+      
       <button class="hamburger" id="hamburger-btn" aria-label="Ouvrir le menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -69,7 +75,6 @@
 
     <section class="editorial-section" aria-label="Pathologies détaillées">
 
-      <!-- 01 Glaucome -->
       <div class="editorial-block">
         <div class="editorial-number" aria-hidden="true"><span>01 — Glaucome</span></div>
         <div class="editorial-text">
@@ -95,18 +100,13 @@
         </div>
         <div class="editorial-visual" aria-hidden="true">
           <svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Champ visuel avec scotome périphérique -->
             <circle cx="110" cy="110" r="85" fill="#eef6fc" opacity="0.3" stroke="#3a7bbf" stroke-width="1" opacity="0.3"/>
-            <!-- Zone de vision normale (centre) -->
             <circle cx="110" cy="110" r="50" fill="#3a7bbf" opacity="0.18"/>
-            <!-- Scotome périphérique — zones sombres -->
             <path d="M110 25 A85 85 0 0 1 185 68 L155 78 A55 55 0 0 0 110 55 Z" fill="#1a3557" opacity="0.55"/>
             <path d="M185 152 A85 85 0 0 1 110 195 L110 165 A55 55 0 0 0 160 135 Z" fill="#1a3557" opacity="0.5"/>
             <path d="M35 68 A85 85 0 0 1 62 35 L78 60 A55 55 0 0 0 58 80 Z" fill="#1a3557" opacity="0.45"/>
-            <!-- Point de fixation central -->
             <circle cx="110" cy="110" r="8" fill="#3a7bbf" opacity="0.7"/>
             <circle cx="110" cy="110" r="3" fill="#d6eaf8"/>
-            <!-- Légende -->
             <rect x="30" y="185" width="12" height="12" rx="2" fill="#3a7bbf" opacity="0.5"/>
             <text x="47" y="195" font-family="'Lato',Arial,sans-serif" font-size="8" fill="#4a6080">Vision conservée</text>
             <rect x="110" y="185" width="12" height="12" rx="2" fill="#1a3557" opacity="0.6"/>
@@ -115,27 +115,20 @@
         </div>
       </div>
 
-      <!-- 02 Cataracte — illustration gauche -->
       <div class="editorial-block reverse">
         <div class="editorial-number" aria-hidden="true"><span>02 — Cataracte</span></div>
         <div class="editorial-visual" aria-hidden="true">
           <svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Cristallin normal vs opacifié -->
-            <!-- Œil gauche — cristallin clair -->
             <ellipse cx="68" cy="100" rx="26" ry="38" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" fill="rgba(214,234,248,0.08)"/>
             <ellipse cx="68" cy="100" rx="14" ry="22" stroke="rgba(91,159,214,0.7)" stroke-width="2" fill="rgba(91,159,214,0.12)"/>
             <text x="68" y="148" text-anchor="middle" font-family="'Lato',Arial,sans-serif" font-size="7.5" fill="rgba(255,255,255,0.45)">Normal</text>
-            <!-- Flèche -->
             <path d="M100 100 L120 100" stroke="rgba(255,255,255,0.35)" stroke-width="1.5" stroke-dasharray="3 2"/>
             <polygon points="120,100 115,97 115,103" fill="rgba(255,255,255,0.4)"/>
-            <!-- Œil droit — cristallin opacifié -->
             <ellipse cx="152" cy="100" rx="26" ry="38" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" fill="rgba(214,234,248,0.08)"/>
             <ellipse cx="152" cy="100" rx="14" ry="22" stroke="rgba(91,159,214,0.5)" stroke-width="2" fill="rgba(26,53,87,0.5)"/>
-            <!-- Opacification -->
             <ellipse cx="150" cy="96" rx="9" ry="12" fill="rgba(255,255,255,0.25)" opacity="0.8"/>
             <ellipse cx="156" cy="108" rx="6" ry="8" fill="rgba(255,255,255,0.2)" opacity="0.7"/>
             <text x="152" y="148" text-anchor="middle" font-family="'Lato',Arial,sans-serif" font-size="7.5" fill="rgba(255,255,255,0.45)">Cataracte</text>
-            <!-- Implant schématique (chirurgie) -->
             <ellipse cx="110" cy="172" rx="30" ry="16" stroke="rgba(91,159,214,0.6)" stroke-width="2" fill="rgba(91,159,214,0.1)"/>
             <line x1="80" y1="172" x2="65" y2="160" stroke="rgba(91,159,214,0.5)" stroke-width="1.5" stroke-linecap="round"/>
             <line x1="140" y1="172" x2="155" y2="160" stroke="rgba(91,159,214,0.5)" stroke-width="1.5" stroke-linecap="round"/>
@@ -167,7 +160,6 @@
         </div>
       </div>
 
-      <!-- 03 DMLA — texte gauche -->
       <div class="editorial-block">
         <div class="editorial-number" aria-hidden="true"><span>03 — DMLA</span></div>
         <div class="editorial-text">
@@ -195,53 +187,40 @@
         </div>
         <div class="editorial-visual" aria-hidden="true">
           <svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Grille d'Amsler déformée -->
             <g opacity="0.6">
-              <!-- Grille normale en périphérie -->
               <line x1="50" y1="50" x2="170" y2="50"  stroke="#3a7bbf" stroke-width="1" opacity="0.4"/>
               <line x1="50" y1="75" x2="170" y2="75"  stroke="#3a7bbf" stroke-width="1" opacity="0.4"/>
-              <!-- Lignes déformées au centre -->
               <path d="M50 100 Q80 88 110 82 Q140 88 170 100" stroke="#3a7bbf" stroke-width="1.5" fill="none" opacity="0.7"/>
               <path d="M50 125 Q82 130 110 122 Q138 130 170 125" stroke="#3a7bbf" stroke-width="1.5" fill="none" opacity="0.7"/>
               <line x1="50" y1="150" x2="170" y2="150" stroke="#3a7bbf" stroke-width="1" opacity="0.4"/>
               <line x1="50" y1="170" x2="170" y2="170" stroke="#3a7bbf" stroke-width="1" opacity="0.4"/>
-              <!-- Colonnes -->
               <line x1="50"  y1="50" x2="50"  y2="170" stroke="#3a7bbf" stroke-width="1" opacity="0.4"/>
               <line x1="80"  y1="50" x2="74"  y2="170" stroke="#3a7bbf" stroke-width="1" opacity="0.4"/>
               <path d="M110 50 Q102 90 110 110 Q118 130 110 170" stroke="#3a7bbf" stroke-width="1.5" fill="none" opacity="0.7"/>
               <line x1="140" y1="50" x2="146" y2="170" stroke="#3a7bbf" stroke-width="1" opacity="0.4"/>
               <line x1="170" y1="50" x2="170" y2="170" stroke="#3a7bbf" stroke-width="1" opacity="0.4"/>
             </g>
-            <!-- Scotome central (zone floue) -->
             <ellipse cx="110" cy="110" rx="28" ry="22" fill="#1a3557" opacity="0.5"/>
             <ellipse cx="110" cy="110" rx="18" ry="14" fill="#1a3557" opacity="0.35"/>
-            <!-- Point de fixation -->
             <circle cx="110" cy="110" r="3" fill="rgba(91,159,214,0.4)"/>
             <text x="110" y="200" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#4a6080" opacity="0.7" font-style="italic">Grille d'Amsler — déformations centrales</text>
           </svg>
         </div>
       </div>
 
-      <!-- 04 Dystrophies — illustration gauche -->
       <div class="editorial-block reverse">
         <div class="editorial-number" aria-hidden="true"><span>04 — Dystrophies</span></div>
         <div class="editorial-visual" aria-hidden="true">
           <svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Électrorétinogramme stylisé -->
             <rect x="30" y="40" width="160" height="110" rx="4" fill="rgba(26,53,87,0.6)" stroke="rgba(91,159,214,0.3)" stroke-width="1.5"/>
-            <!-- Signal ERG normal en haut -->
             <path d="M40 75 L65 75 L70 60 L75 90 L80 65 L85 75 L120 75 L125 55 L130 95 L135 70 L140 75 L175 75"
                   stroke="rgba(91,159,214,0.8)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            <!-- Ligne de base -->
             <line x1="35" y1="75" x2="185" y2="75" stroke="rgba(255,255,255,0.1)" stroke-width="1" stroke-dasharray="3 2"/>
-            <!-- Signal ERG atténué en bas (dystrophie) -->
             <path d="M40 120 L75 120 L78 115 L82 125 L86 120 L150 120 L153 113 L158 127 L162 120 L175 120"
                   stroke="rgba(91,159,214,0.35)" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
             <line x1="35" y1="120" x2="185" y2="120" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="3 2"/>
-            <!-- Étiquettes -->
             <text x="40" y="58" font-family="'Lato',Arial,sans-serif" font-size="7.5" fill="rgba(91,159,214,0.8)" font-weight="700">ERG normal</text>
             <text x="40" y="108" font-family="'Lato',Arial,sans-serif" font-size="7.5" fill="rgba(91,159,214,0.45)">Dystrophie</text>
-            <!-- Spirale ADN stylisée -->
             <path d="M110 160 Q118 165 110 172 Q102 179 110 186" stroke="rgba(91,159,214,0.5)" stroke-width="2" fill="none"/>
             <path d="M110 160 Q102 165 110 172 Q118 179 110 186" stroke="rgba(214,234,248,0.4)" stroke-width="1.5" fill="none"/>
             <line x1="104" y1="163" x2="116" y2="163" stroke="rgba(91,159,214,0.4)" stroke-width="1" stroke-linecap="round"/>
@@ -275,7 +254,6 @@
         </div>
       </div>
 
-      <!-- 05 Uvéite — texte gauche -->
       <div class="editorial-block">
         <div class="editorial-number" aria-hidden="true"><span>05 — Uvéite</span></div>
         <div class="editorial-text">
@@ -302,52 +280,37 @@
         </div>
         <div class="editorial-visual" aria-hidden="true">
           <svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Œil rouge / enflammé -->
             <ellipse cx="110" cy="110" rx="88" ry="55" stroke="#3a7bbf" stroke-width="1.5" fill="#eef6fc" opacity="0.3"/>
-            <!-- Rougeur conjonctivale -->
             <ellipse cx="110" cy="110" rx="88" ry="55" fill="rgba(58,123,191,0.08)"/>
-            <!-- Vaisseaux dilatés -->
             <path d="M30 100 Q55 95 75 105" stroke="rgba(26,53,87,0.5)" stroke-width="1.5" fill="none"/>
             <path d="M28 118 Q52 122 72 115" stroke="rgba(26,53,87,0.4)" stroke-width="1.2" fill="none"/>
             <path d="M190 100 Q165 95 148 105" stroke="rgba(26,53,87,0.5)" stroke-width="1.5" fill="none"/>
             <path d="M192 118 Q168 122 148 115" stroke="rgba(26,53,87,0.4)" stroke-width="1.2" fill="none"/>
-            <!-- Cornée -->
             <circle cx="110" cy="110" r="32" stroke="#1a3557" stroke-width="1.5" fill="rgba(214,234,248,0.3)"/>
-            <!-- Hypopion (sédimentation cellulaire) -->
             <path d="M85 128 Q110 132 135 128 L135 122 Q110 126 85 122 Z" fill="rgba(26,53,87,0.4)"/>
-            <!-- Pupille irrégulière (synéchies) -->
             <path d="M110 98 Q118 104 122 110 Q118 116 110 122 Q100 116 98 110 Q100 104 110 98 Z"
                   fill="#1a3557" opacity="0.8" stroke="#3a7bbf" stroke-width="0.5"/>
-            <!-- Reflet cornéen -->
             <ellipse cx="100" cy="100" rx="7" ry="5" fill="rgba(255,255,255,0.2)" transform="rotate(-30,100,100)"/>
             <text x="110" y="186" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#4a6080" opacity="0.7" font-style="italic">Uvéite antérieure — hypopion</text>
           </svg>
         </div>
       </div>
 
-      <!-- 06 Rétinopathie diabétique — illustration gauche -->
       <div class="editorial-block reverse">
         <div class="editorial-number" aria-hidden="true"><span>06 — Rétinopathie</span></div>
         <div class="editorial-visual" aria-hidden="true">
           <svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Fond d'œil diabétique stades -->
             <circle cx="110" cy="105" r="82" fill="rgba(26,53,87,0.3)" stroke="rgba(91,159,214,0.25)" stroke-width="1.5"/>
-            <!-- Disque optique -->
             <ellipse cx="148" cy="92" rx="13" ry="17" fill="rgba(214,234,248,0.5)" stroke="rgba(91,159,214,0.6)" stroke-width="1.5"/>
-            <!-- Macula -->
             <circle cx="80" cy="108" r="16" stroke="rgba(91,159,214,0.3)" stroke-width="1" fill="none" stroke-dasharray="2 2"/>
-            <!-- Néovaisseaux (rétinopathie proliférante) -->
             <path d="M148 92 C135 88 118 82 95 95 Q80 102 80 108" stroke="rgba(91,159,214,0.6)" stroke-width="2" fill="none"/>
             <path d="M148 92 C140 102 128 114 108 122 Q94 128 85 124" stroke="rgba(91,159,214,0.5)" stroke-width="1.5" fill="none"/>
-            <!-- Microanévrysmes -->
             <circle cx="100" cy="100" r="3.5" fill="rgba(26,53,87,0.8)"/>
             <circle cx="92"  cy="115" r="3"   fill="rgba(26,53,87,0.7)"/>
             <circle cx="115" cy="108" r="3"   fill="rgba(26,53,87,0.7)"/>
             <circle cx="72"  cy="100" r="2.5" fill="rgba(26,53,87,0.65)"/>
             <circle cx="125" cy="95"  r="2.5" fill="rgba(26,53,87,0.6)"/>
-            <!-- Hémorragies en flammèches -->
             <path d="M105 118 L100 130 L108 126 L104 138" stroke="rgba(26,53,87,0.6)" stroke-width="3" fill="none" stroke-linecap="round"/>
-            <!-- Exsudats durs -->
             <ellipse cx="68"  cy="100" rx="7" ry="4.5" fill="rgba(214,234,248,0.7)"/>
             <ellipse cx="95"  cy="130" rx="5" ry="3.5" fill="rgba(214,234,248,0.65)"/>
             <ellipse cx="118" cy="128" rx="4" ry="3"   fill="rgba(214,234,248,0.6)"/>

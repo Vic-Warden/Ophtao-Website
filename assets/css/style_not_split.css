@@ -1102,3 +1102,835 @@ footer span
     display: none;
   }
 }
+
+/* =============================================================
+   OPHTAO — Styles page Équipe Médicale (medical-team.html)
+   À coller à la fin de style.css
+   ============================================================= */
+
+/* ----- Section de présentation d'une catégorie ----- */
+.team-section {
+  background: var(--white);
+  padding: 5rem 2rem 4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Alternance de fond pour les sections paires */
+.team-section--alt {
+  background: var(--off-white);
+}
+
+/* En-tête de section — numéro + titre + description côte à côte */
+.team-section-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+  max-width: 1100px;
+  margin: 0 auto 3.5rem;
+}
+
+.team-section-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* Numéro de section discret en Playfair italic */
+.team-section-number {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--border);
+  line-height: 1;
+  user-select: none;
+  margin-top: 0.1rem;
+}
+
+.team-section-label h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+.team-section-label h2 em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--steel);
+}
+
+/* Texte d'introduction à droite du titre */
+.team-section-desc {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  line-height: 1.85;
+  color: var(--text-mid);
+  font-weight: 300;
+  max-width: 540px;
+  padding-top: 0.4rem;
+  border-left: 2px solid var(--border);
+  padding-left: 2rem;
+}
+
+/* ----- Grille de cartes ----- */
+/* 4 colonnes pour les chirurgiens, 2 pour les ortho/admin */
+.team-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.8rem;
+}
+
+.team-grid--surgeons {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.team-grid--ortho {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 780px;
+}
+
+.team-grid--admin {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 780px;
+}
+
+/* ----- Carte individuelle ----- */
+/* Flexbox colonne pour aligner le bas de carte quand les textes varient */
+.team-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  /* Bande supérieure colorée selon la catégorie */
+  border-top: 3px solid var(--navy);
+}
+
+.team-card--ortho {
+  border-top-color: var(--steel);
+}
+
+.team-card--admin {
+  border-top-color: var(--steel-light);
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 36px rgba(26, 53, 87, 0.14);
+}
+
+/* ----- Zone avatar ----- */
+/* Fond dégradé centré, hauteur fixe pour uniformité */
+.team-card-avatar {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, var(--navy) 0%, #0a1a38 100%);
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* Légère texture radiale de fond */
+.team-card-avatar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 80%,
+    rgba(58, 123, 191, 0.2) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.team-card-avatar--ortho {
+  background: linear-gradient(160deg, var(--steel) 0%, var(--navy) 100%);
+}
+
+.team-card-avatar--admin {
+  background: linear-gradient(160deg, var(--steel-light) 0%, var(--steel) 100%);
+}
+
+/* SVG avatar centré */
+.team-card-avatar svg {
+  width: 90px;
+  height: 90px;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.35));
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-card-avatar svg {
+  transform: scale(1.05);
+}
+
+/* ----- Corps de carte (flex colonne, pousse le bas) ----- */
+.team-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.6rem 1.6rem 1.8rem;
+}
+
+/* Méta : nom, titre, règle */
+.team-card-meta {
+  margin-bottom: 0.2rem;
+}
+
+.team-card-name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.3;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.01em;
+}
+
+.team-card-title {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin-bottom: 0;
+}
+
+.team-card-title--ortho {
+  color: var(--steel);
+}
+
+.team-card-title--admin {
+  color: var(--steel-light);
+}
+
+/* Ligne de séparation après le titre */
+.team-card-rule {
+  width: 32px;
+  height: 2px;
+  background: var(--steel);
+  border-radius: 2px;
+  margin: 0.9rem 0 1rem;
+}
+
+.team-card-rule--ortho {
+  background: var(--steel);
+}
+
+.team-card-rule--admin {
+  background: var(--steel-light);
+}
+
+/* Contenu — prend tout l'espace disponible pour aligner les bas */
+.team-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* ----- Liste de diplômes ----- */
+.team-diploma-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.team-diploma-list li {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--text-mid);
+  font-weight: 300;
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+/* Puce en losange — différente de la liste éditoriale */
+.team-diploma-list li::before {
+  content: '';
+  display: inline-block;
+  flex-shrink: 0;
+  width: 5px;
+  height: 5px;
+  background: var(--steel);
+  border-radius: 1px;
+  transform: rotate(45deg);
+  margin-top: 7px;
+}
+
+.team-diploma-list li strong {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+/* ----- Texte générique dans la carte ----- */
+.team-card-text {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--text-mid);
+  font-weight: 300;
+}
+
+/* Mention "en cours de rédaction" — italique et atténué */
+.team-card-text--pending {
+  font-style: italic;
+  color: var(--text-light);
+  font-size: 0.8rem;
+}
+
+/* =============================================================
+   RESPONSIVE ÉQUIPE
+   ============================================================= */
+
+/* Grand tablette : chirurgiens sur 2 colonnes */
+@media (max-width: 1024px) {
+  .team-grid--surgeons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablette : en-têtes de section en colonne */
+@media (max-width: 840px) {
+  .team-section-header {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .team-section-desc {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid var(--border);
+    padding-top: 1.2rem;
+    max-width: 100%;
+  }
+
+  .team-grid--ortho,
+  .team-grid--admin {
+    max-width: 100%;
+  }
+}
+
+/* Mobile : toutes les grilles sur 1 colonne */
+@media (max-width: 560px) {
+  .team-grid--surgeons,
+  .team-grid--ortho,
+  .team-grid--admin {
+    grid-template-columns: 1fr;
+  }
+
+  .team-section {
+    padding: 3.5rem 1.2rem 3rem;
+  }
+
+  .team-card-avatar {
+    height: 140px;
+  }
+
+  .team-card-avatar svg {
+    width: 76px;
+    height: 76px;
+  }
+}
+
+
+
+/* ----- Page header éditorial ----- */
+.page-hero {
+  background: var(--navy);
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fond géométrique décoratif */
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 120%, rgba(58,123,191,0.25) 0%, transparent 60%),
+    radial-gradient(circle at 10% 0%, rgba(255,255,255,0.04) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+/* Lignes décoratives en coin (cohérence hero d'accueil) */
+.page-hero::after {
+  content: '';
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 60px;
+  height: 60px;
+  border-top: 1.5px solid rgba(255,255,255,0.2);
+  border-left: 1.5px solid rgba(255,255,255,0.2);
+  pointer-events: none;
+}
+
+.page-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto;
+  animation: fadeInUp 0.8s ease 0.1s both;
+}
+
+/* Catégorie au-dessus du titre */
+.page-hero-label {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--steel-light);
+  margin-bottom: 1.2rem;
+}
+
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.18;
+  letter-spacing: 0.01em;
+  margin-bottom: 1.4rem;
+}
+
+.page-hero h1 em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--sky);
+}
+
+/* Séparateur fin */
+.page-hero-rule {
+  width: 56px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--steel-light), transparent);
+  margin: 0 auto 1.4rem;
+}
+
+.page-hero p {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.85;
+  color: rgba(255,255,255,0.72);
+  font-weight: 300;
+}
+
+/* ----- Conteneur principal éditorial ----- */
+.editorial-section {
+  background: var(--white);
+  padding: 0;
+}
+
+/* ----- Bloc éditorial alterné ----- */
+/* Layout : numéro | texte | illustration  (ou inverse) */
+.editorial-block {
+  display: grid;
+  grid-template-columns: 64px 1fr 1fr;
+  gap: 0;
+  min-height: 420px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+.editorial-block:last-child {
+  border-bottom: none;
+}
+
+.editorial-block:hover {
+  background: var(--off-white);
+}
+
+/* Colonne numéro — à gauche, fond navy */
+.editorial-number {
+  background: var(--navy);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 3rem 0 0;
+  position: relative;
+}
+
+/* Ligne verticale décorative */
+.editorial-number::after {
+  content: '';
+  position: absolute;
+  top: 4.5rem;
+  left: 50%;
+  bottom: 0;
+  width: 1px;
+  background: rgba(255,255,255,0.1);
+  transform: translateX(-50%);
+}
+
+.editorial-number span {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.12em;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  user-select: none;
+}
+
+/* Colonne texte */
+.editorial-text {
+  padding: 4rem 3.5rem 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Badge de spécialité */
+.editorial-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin-bottom: 1.2rem;
+}
+
+.editorial-badge::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: var(--steel);
+  border-radius: 2px;
+}
+
+.editorial-text h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.25;
+  margin-bottom: 1.4rem;
+  letter-spacing: 0.01em;
+}
+
+.editorial-text h2 em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--steel);
+}
+
+.editorial-text p {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.88;
+  color: var(--text-mid);
+  font-weight: 300;
+  margin-bottom: 1.2rem;
+}
+
+.editorial-text p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Points clés — liste soignée */
+.editorial-list {
+  list-style: none;
+  margin-top: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.editorial-list li {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  font-weight: 300;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.6;
+}
+
+/* Puce personnalisée */
+.editorial-list li::before {
+  content: '';
+  display: inline-block;
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--steel);
+  margin-top: 7px;
+}
+
+/* Étiquette "Symptômes" / "Traitements" dans les listes */
+.editorial-list li strong {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+/* Colonne illustration */
+.editorial-visual {
+  background: var(--ice);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Légère texture de fond */
+.editorial-visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 70% 30%, rgba(58,123,191,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 30% 70%, rgba(26,53,87,0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.editorial-visual svg {
+  width: min(220px, 70%);
+  height: auto;
+  position: relative;
+  z-index: 1;
+  opacity: 0.85;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.editorial-block:hover .editorial-visual svg {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+/* Variante inversée : illustration à gauche, texte à droite */
+.editorial-block.reverse {
+  grid-template-columns: 64px 1fr 1fr;
+}
+
+.editorial-block.reverse .editorial-number {
+  order: 1;
+}
+
+.editorial-block.reverse .editorial-visual {
+  order: 2;
+  background: var(--navy-deep);
+}
+
+.editorial-block.reverse .editorial-visual::before {
+  background:
+    radial-gradient(circle at 30% 60%, rgba(91,159,214,0.12) 0%, transparent 50%),
+    radial-gradient(circle at 70% 30%, rgba(255,255,255,0.03) 0%, transparent 50%);
+}
+
+.editorial-block.reverse .editorial-visual svg {
+  opacity: 0.7;
+  filter: brightness(1.6);
+}
+
+.editorial-block.reverse:hover .editorial-visual svg {
+  opacity: 0.9;
+}
+
+.editorial-block.reverse .editorial-text {
+  order: 3;
+}
+
+/* ----- CTA de fin de page ----- */
+/* Bloc d'appel à l'action centré, fond navy-deep */
+.page-cta {
+  background: var(--navy-deep);
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 70% 80% at 50% 50%,
+    rgba(58,123,191,0.12) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.page-cta-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.page-cta h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.01em;
+}
+
+.page-cta p {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.55);
+  font-weight: 300;
+  margin-bottom: 2.4rem;
+  line-height: 1.7;
+}
+
+/* Boutons CTA */
+.page-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Bouton téléphone — outline blanc */
+.btn-cta-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  border: 1.5px solid rgba(255,255,255,0.4);
+  border-radius: var(--radius);
+  background: transparent;
+  transition: background 0.2s, border-color 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-cta-phone:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.7);
+}
+
+.btn-cta-phone svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Bouton rendez-vous — plein acier */
+.btn-cta-rdv {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  background: var(--steel);
+  border: 1.5px solid var(--steel);
+  border-radius: var(--radius);
+  transition: background 0.2s, border-color 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-cta-rdv:hover {
+  background: var(--steel-light);
+  border-color: var(--steel-light);
+}
+
+.btn-cta-rdv svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* =============================================================
+   RESPONSIVE ÉDITORIAL
+   ============================================================= */
+
+/* Tablette : colonne numéro masquée, grille 1 col texte + 1 col image */
+@media (max-width: 960px) {
+  .editorial-block,
+  .editorial-block.reverse {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .editorial-number {
+    display: none;
+  }
+
+  .editorial-block.reverse .editorial-visual {
+    order: 1;
+  }
+
+  .editorial-block.reverse .editorial-text {
+    order: 2;
+  }
+
+  .editorial-text {
+    padding: 3rem 2.5rem;
+  }
+}
+
+/* Mobile : empilement vertical */
+@media (max-width: 640px) {
+  .editorial-block,
+  .editorial-block.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .editorial-visual {
+    min-height: 200px;
+    padding: 2.5rem;
+  }
+
+  .editorial-visual svg {
+    width: min(160px, 55%);
+  }
+
+  .editorial-text {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .page-hero {
+    padding: 3.5rem 1.5rem 3rem;
+  }
+
+  .page-cta {
+    padding: 3.5rem 1.5rem;
+  }
+}

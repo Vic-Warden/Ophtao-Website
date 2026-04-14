@@ -1,0 +1,375 @@
+/* Top notification bar */
+.top-bar 
+{
+  background: var(--navy-deep);
+  color: rgba(255,255,255,0.82);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 7px 1rem;
+  animation: fadeInDown 0.5s ease both;
+}
+
+.top-bar strong 
+{
+  color: var(--steel-light);
+  font-weight: 700;
+}
+
+/* Main sticky header */
+header 
+{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 20px rgba(26,53,87,0.07);
+  animation: fadeInDown 0.6s ease 0.1s both;
+}
+
+.header-inner 
+{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Logo & branding */
+.logo 
+{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.logo-mark 
+{
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--steel) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.logo-mark svg 
+{
+  width: 26px;
+  height: 26px;
+}
+
+.logo-text 
+{
+  line-height: 1.2;
+}
+
+.logo-text .brand 
+{
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 0.02em;
+}
+
+.logo-text .tagline 
+{
+  font-size: 0.68rem;
+  color: var(--text-light);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+/* Primary navigation */
+nav 
+{
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+nav a 
+{
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--text-mid);
+  letter-spacing: 0.04em;
+  padding: 6px 16px;
+  border-radius: var(--radius);
+  transition: color 0.2s, background 0.2s;
+  position: relative;
+}
+
+nav a:hover 
+{
+  color: var(--navy);
+  background: var(--ice);
+}
+
+nav a.active 
+{
+  color: var(--navy);
+  font-weight: 700;
+}
+
+/* Active link animated underline */
+nav a.active::after 
+{
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 16px;
+  right: 16px;
+  height: 2px;
+  background: var(--steel);
+  border-radius: 2px;
+  transform-origin: left;
+  animation: lineExpand 0.4s ease 0.5s both;
+}
+
+/* Dropdown menu */
+.nav-dropdown 
+{
+  position: relative;
+}
+
+.nav-dropdown > a.nav-more 
+{
+  border: 1px solid var(--border);
+  color: var(--steel);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-dropdown > a.nav-more::after 
+{
+  display: none;
+}
+
+/* Dropdown chevron animation */
+.nav-dropdown > a.nav-more .chevron 
+{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.nav-dropdown:hover > a.nav-more .chevron 
+{
+  transform: rotate(-135deg) translateY(-2px);
+}
+
+.nav-dropdown:hover > a.nav-more 
+{
+  background: var(--steel);
+  color: var(--white);
+  border-color: var(--steel);
+}
+
+/* Dropdown container */
+.dropdown-menu 
+{
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 260px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 0 8px 32px rgba(26,53,87,0.13);
+  padding: 6px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  z-index: 200;
+}
+
+.nav-dropdown:hover .dropdown-menu 
+{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu a 
+{
+  display: block;
+  padding: 10px 20px;
+  font-family: var(--font-sans);
+  font-size: 0.83rem;
+  color: var(--text-mid);
+  letter-spacing: 0.03em;
+  border-radius: 0;
+  transition: background 0.15s, color 0.15s;
+}
+
+.dropdown-menu a:hover 
+{
+  background: var(--ice);
+  color: var(--navy);
+}
+
+.dropdown-menu a + a 
+{
+  border-top: 1px solid rgba(58,123,191,0.08);
+}
+
+/* Mobile hamburger button */
+.hamburger 
+{
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 6px;
+  background: none;
+  border: none;
+}
+
+.hamburger span 
+{
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Footer */
+footer 
+{
+  background: var(--navy-deep);
+  color: rgba(255,255,255,0.45);
+  text-align: center;
+  padding: 2rem 1.5rem;
+  font-size: 0.75rem;
+  font-family: var(--font-sans);
+  letter-spacing: 0.05em;
+  line-height: 1.8;
+}
+
+footer span 
+{
+  color: var(--steel-light);
+}
+
+/* Mobile layout */
+@media (max-width: 680px) 
+{
+  .header-inner 
+  {
+    padding: 0 1.2rem;
+  }
+  
+  /* Convert nav to mobile drawer */
+  nav 
+  {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 8px 24px rgba(26,53,87,0.1);
+    gap: 0;
+  }
+  
+  nav.open 
+  {
+    display: flex;
+  }
+  
+  nav a 
+  {
+    padding: 12px 8px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--ice);
+  }
+  
+  nav a.active::after 
+  {
+    display: none;
+  }
+  
+  .hamburger 
+  {
+    display: flex;
+  }
+  
+  /* Reset dropdown for mobile accordion flow */
+  .dropdown-menu 
+  {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    background: var(--ice);
+    display: none;
+  }
+  
+  .nav-dropdown.mobile-open .dropdown-menu 
+  {
+    display: block;
+  }
+  
+  .nav-dropdown > a.nav-more 
+  {
+    border: none;
+    border-bottom: 1px solid var(--ice);
+    width: 100%;
+    padding: 12px 8px;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .dropdown-menu a 
+  {
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.85rem;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 400px) 
+{
+  .logo-text .brand {
+    font-size: 1.2rem;
+  }
+  
+  /* Hide tagline to save space */
+  .logo-text .tagline 
+  {
+    display: none;
+  }
+}

@@ -4,10 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Plateau technique — Ophtao</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
   <link rel="stylesheet" href="assets/css/editorial.css" />
 </head>
 <body>
@@ -19,6 +23,7 @@
 
   <header>
     <div class="header-inner">
+      
       <a href="index.html" class="logo" aria-label="Ophtao – Accueil">
         <div class="logo-mark">
           <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -32,10 +37,12 @@
           <div class="tagline">Dr Mégret & Associés</div>
         </div>
       </a>
+      
       <nav id="main-nav" role="navigation" aria-label="Navigation principale">
         <a href="index.html">Page d'accueil</a>
         <a href="index.html#infos-pratiques">Le cabinet</a>
         <a href="index.html#equipe">L'équipe médicale</a>
+        
         <div class="nav-dropdown">
           <a href="#" class="nav-more active" onclick="return false;">Plus <span class="chevron"></span></a>
           <div class="dropdown-menu">
@@ -46,6 +53,7 @@
           </div>
         </div>
       </nav>
+      
       <button class="hamburger" id="hamburger-btn" aria-label="Ouvrir le menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -69,7 +77,6 @@
 
     <section class="editorial-section" aria-label="Équipements">
 
-      <!-- 01 Angio OCT — texte gauche / illustration droite -->
       <div class="editorial-block">
         <div class="editorial-number" aria-hidden="true"><span>01 — Angio OCT</span></div>
         <div class="editorial-text">
@@ -116,7 +123,6 @@
         </div>
       </div>
 
-      <!-- 02 Biomètre — illustration gauche / texte droite -->
       <div class="editorial-block reverse">
         <div class="editorial-number" aria-hidden="true"><span>02 — Biomètre</span></div>
         <div class="editorial-visual" aria-hidden="true">
@@ -159,7 +165,6 @@
         </div>
       </div>
 
-      <!-- 03 Topographe — texte gauche / illustration droite -->
       <div class="editorial-block">
         <div class="editorial-number" aria-hidden="true"><span>03 — Topographe</span></div>
         <div class="editorial-text">
@@ -245,7 +250,48 @@
   </footer>
 
   <script>
-    (function(){const b=document.getElementById('hamburger-btn'),n=document.getElementById('main-nav');if(!b||!n)return;b.addEventListener('click',function(){const o=n.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');const s=b.querySelectorAll('span');if(o){s[0].style.transform='rotate(45deg) translate(5px,5px)';s[1].style.opacity='0';s[2].style.transform='rotate(-45deg) translate(5px,-5px)';}else{s[0].style.transform='';s[1].style.opacity='';s[2].style.transform='';}});const d=n.querySelector('.nav-dropdown > a.nav-more');if(d)d.addEventListener('click',function(e){if(window.innerWidth<=680){e.preventDefault();d.closest('.nav-dropdown').classList.toggle('mobile-open');}});n.querySelectorAll('a:not(.nav-more)').forEach(function(l){l.addEventListener('click',function(){n.classList.remove('open');b.setAttribute('aria-expanded','false');const s=b.querySelectorAll('span');s[0].style.transform='';s[1].style.opacity='';s[2].style.transform='';});});})();
+    (function(){
+      const b=document.getElementById('hamburger-btn'),
+            n=document.getElementById('main-nav');
+      if(!b||!n)return;
+      
+      // Toggle mobile menu
+      b.addEventListener('click',function(){
+        const o=n.classList.toggle('open');
+        b.setAttribute('aria-expanded',o?'true':'false');
+        const s=b.querySelectorAll('span');
+        if(o){
+          s[0].style.transform='rotate(45deg) translate(5px,5px)';
+          s[1].style.opacity='0';
+          s[2].style.transform='rotate(-45deg) translate(5px,-5px)';
+        }else{
+          s[0].style.transform='';
+          s[1].style.opacity='';
+          s[2].style.transform='';
+        }
+      });
+      
+      // Toggle dropdown menu on mobile
+      const d=n.querySelector('.nav-dropdown > a.nav-more');
+      if(d)d.addEventListener('click',function(e){
+        if(window.innerWidth<=680){
+          e.preventDefault();
+          d.closest('.nav-dropdown').classList.toggle('mobile-open');
+        }
+      });
+      
+      // Close menu when a link is clicked
+      n.querySelectorAll('a:not(.nav-more)').forEach(function(l){
+        l.addEventListener('click',function(){
+          n.classList.remove('open');
+          b.setAttribute('aria-expanded','false');
+          const s=b.querySelectorAll('span');
+          s[0].style.transform='';
+          s[1].style.opacity='';
+          s[2].style.transform='';
+        });
+      });
+    })();
   </script>
 </body>
 </html>

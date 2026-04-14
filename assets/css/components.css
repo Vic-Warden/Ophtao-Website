@@ -1,0 +1,127 @@
+/* Primary outlined button */
+.btn-learn 
+{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  padding: 9px 18px;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--steel);
+  border: 1.5px solid var(--steel);
+  border-radius: var(--radius);
+  background: transparent;
+  transition: background 0.2s, color 0.2s;
+  align-self: flex-start;
+}
+
+.btn-learn:hover 
+{
+  background: var(--steel);
+  color: var(--white);
+}
+
+/* SVG icon sizing */
+.btn-learn svg 
+{
+  width: 13px;
+  height: 13px;
+}
+
+/* Vertical wrapper for contact buttons */
+.contact-buttons 
+{
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+/* Base style for all contact buttons */
+.btn-contact 
+{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 16px;
+  border-radius: var(--radius);
+  font-family: var(--font-sans);
+  font-size: 0.84rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background 0.22s, transform 0.15s;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+
+/* Prevent icon shrinking */
+.btn-contact svg 
+{
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Phone variant */
+.btn-phone 
+{
+  background: var(--navy);
+  color: var(--white);
+}
+
+.btn-phone:hover 
+{
+  background: var(--navy-deep);
+  transform: translateX(2px);
+}
+
+/* Email variant */
+.btn-email 
+{
+  background: #2a4a72;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.78rem;
+}
+
+.btn-email:hover 
+{
+  background: var(--navy);
+  transform: translateX(2px);
+}
+
+/* Appointment variant */
+.btn-rdv 
+{
+  background: var(--steel);
+  color: var(--white);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  justify-content: center;
+  margin-top: 0.3rem;
+}
+
+.btn-rdv:hover 
+{
+  background: var(--steel-light);
+}
+
+/* Call to Action container */
+.cta-block 
+{
+  max-width: 1100px;
+  margin: 2.5rem auto 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Reset width for contact buttons inside */
+.cta-block .btn-contact 
+{
+  width: auto;
+}

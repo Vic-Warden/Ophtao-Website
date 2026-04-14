@@ -4,10 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Correction des défauts visuels — Ophtao</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
   <link rel="stylesheet" href="assets/css/editorial.css" />
 </head>
 <body>
@@ -19,6 +23,7 @@
 
   <header>
     <div class="header-inner">
+      
       <a href="index.html" class="logo" aria-label="Ophtao – Accueil">
         <div class="logo-mark">
           <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -32,6 +37,7 @@
           <div class="tagline">Dr Mégret & Associés</div>
         </div>
       </a>
+      
       <nav id="main-nav" role="navigation" aria-label="Navigation principale">
         <a href="index.html">Page d'accueil</a>
         <a href="index.html#infos-pratiques">Le cabinet</a>
@@ -46,6 +52,7 @@
           </div>
         </div>
       </nav>
+      
       <button class="hamburger" id="hamburger-btn" aria-label="Ouvrir le menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -69,7 +76,6 @@
 
     <section class="editorial-section" aria-label="Défauts visuels et corrections">
 
-      <!-- 01 Myopie — texte gauche -->
       <div class="editorial-block">
         <div class="editorial-number" aria-hidden="true"><span>01 — Myopie</span></div>
         <div class="editorial-text">
@@ -96,27 +102,17 @@
         </div>
         <div class="editorial-visual" aria-hidden="true">
           <svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Œil myope — coupe sagittale -->
-            <!-- Globe oculaire allongé -->
             <ellipse cx="108" cy="110" rx="72" ry="60" stroke="#3a7bbf" stroke-width="1.5" fill="rgba(238,246,252,0.25)"/>
-            <!-- Cornée -->
             <path d="M40 96 Q35 110 40 124" stroke="#1a3557" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-            <!-- Cristallin -->
             <ellipse cx="68" cy="110" rx="9" ry="16" stroke="#3a7bbf" stroke-width="1.8" fill="rgba(91,159,214,0.1)"/>
-            <!-- Rétine -->
             <path d="M178 74 Q196 110 178 146" stroke="#3a7bbf" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-            <!-- Rayons convergents — foyer AVANT la rétine -->
             <line x1="40" y1="80" x2="148" y2="110" stroke="rgba(91,159,214,0.5)" stroke-width="1" stroke-dasharray="3 2"/>
             <line x1="40" y1="140" x2="148" y2="110" stroke="rgba(91,159,214,0.5)" stroke-width="1" stroke-dasharray="3 2"/>
-            <!-- Foyer (point rouge symbolique, en bleu ici) -->
             <circle cx="148" cy="110" r="5" fill="#1a3557" opacity="0.8"/>
-            <!-- Rayons divergent ensuite vers la rétine -->
             <line x1="148" y1="110" x2="178" y2="95"  stroke="rgba(91,159,214,0.25)" stroke-width="1"/>
             <line x1="148" y1="110" x2="178" y2="125" stroke="rgba(91,159,214,0.25)" stroke-width="1"/>
-            <!-- Étiquettes -->
             <text x="148" y="130" text-anchor="middle" font-family="'Lato',Arial,sans-serif" font-size="7.5" fill="#3a7bbf" opacity="0.7">Foyer</text>
             <text x="183" y="112" font-family="'Lato',Arial,sans-serif" font-size="7" fill="#4a6080">Rétine</text>
-            <!-- Verre correcteur divergent -->
             <path d="M20 85 Q28 110 20 135" stroke="rgba(58,123,191,0.6)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
             <path d="M26 88 Q22 110 26 132" stroke="rgba(58,123,191,0.4)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
             <text x="18" y="152" font-family="'Lato',Arial,sans-serif" font-size="7" fill="#3a7bbf" opacity="0.7" text-anchor="middle">verre (–)</text>
@@ -125,27 +121,19 @@
         </div>
       </div>
 
-      <!-- 02 Hypermétropie — illustration gauche -->
       <div class="editorial-block reverse">
         <div class="editorial-number" aria-hidden="true"><span>02 — Hypermétropie</span></div>
         <div class="editorial-visual" aria-hidden="true">
           <svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Œil hypermètre — globe court -->
             <ellipse cx="112" cy="110" rx="58" ry="60" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" fill="rgba(26,53,87,0.2)"/>
-            <!-- Cornée -->
             <path d="M58 96 Q53 110 58 124" stroke="rgba(255,255,255,0.6)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-            <!-- Cristallin -->
             <ellipse cx="82" cy="110" rx="9" ry="16" stroke="rgba(91,159,214,0.7)" stroke-width="1.8" fill="rgba(91,159,214,0.1)"/>
-            <!-- Rétine courte -->
             <path d="M168 74 Q186 110 168 146" stroke="rgba(91,159,214,0.5)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-            <!-- Rayons — foyer DERRIÈRE la rétine -->
             <line x1="58" y1="82" x2="190" y2="110" stroke="rgba(91,159,214,0.45)" stroke-width="1" stroke-dasharray="3 2"/>
             <line x1="58" y1="138" x2="190" y2="110" stroke="rgba(91,159,214,0.45)" stroke-width="1" stroke-dasharray="3 2"/>
-            <!-- Foyer virtuel derrière -->
             <circle cx="190" cy="110" r="5" fill="rgba(91,159,214,0.6)"/>
             <text x="196" y="126" font-family="'Lato',Arial,sans-serif" font-size="7.5" fill="rgba(91,159,214,0.65)">Foyer</text>
             <text x="173" y="112" font-family="'Lato',Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.4)">Rétine</text>
-            <!-- Verre correcteur convergent -->
             <path d="M34 88 Q44 110 34 132" stroke="rgba(91,159,214,0.55)" stroke-width="2" fill="none" stroke-linecap="round"/>
             <path d="M40 92 Q46 110 40 128" stroke="rgba(91,159,214,0.4)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
             <text x="38" y="150" font-family="'Lato',Arial,sans-serif" font-size="7" fill="rgba(91,159,214,0.6)" text-anchor="middle">verre (+)</text>
@@ -176,7 +164,6 @@
         </div>
       </div>
 
-      <!-- 03 Presbytie — texte gauche -->
       <div class="editorial-block">
         <div class="editorial-number" aria-hidden="true"><span>03 — Presbytie</span></div>
         <div class="editorial-text">
@@ -204,33 +191,22 @@
         </div>
         <div class="editorial-visual" aria-hidden="true">
           <svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Verres progressifs schématiques -->
-            <!-- Monture -->
             <ellipse cx="80"  cy="100" rx="42" ry="32" stroke="#3a7bbf" stroke-width="2.5" fill="rgba(238,246,252,0.15)"/>
             <ellipse cx="140" cy="100" rx="42" ry="32" stroke="#3a7bbf" stroke-width="2.5" fill="rgba(238,246,252,0.15)"/>
             <line x1="122" y1="100" x2="98" y2="100" stroke="#3a7bbf" stroke-width="2.5"/>
-            <!-- Branches -->
             <line x1="38" y1="88" x2="15" y2="85" stroke="#3a7bbf" stroke-width="2" stroke-linecap="round"/>
             <line x1="182" y1="88" x2="205" y2="85" stroke="#3a7bbf" stroke-width="2" stroke-linecap="round"/>
-            <!-- Zones de vision du verre progressif gauche -->
-            <!-- Loin (haut) -->
             <path d="M45 82 Q80 72 115 82" fill="rgba(91,159,214,0.15)" stroke="rgba(91,159,214,0.25)" stroke-width="0.5"/>
-            <!-- Intermédiaire (milieu) — couloir progressif -->
             <path d="M52 100 Q80 97 108 100 L108 112 Q80 115 52 112 Z" fill="rgba(91,159,214,0.22)"/>
-            <!-- Près (bas) -->
             <path d="M55 118 Q80 128 105 118 L105 128 Q80 132 55 128 Z" fill="rgba(26,53,87,0.3)"/>
-            <!-- Étiquettes -->
             <text x="80" y="82" text-anchor="middle" font-family="'Lato',Arial,sans-serif" font-size="7" fill="#3a7bbf" opacity="0.8">LOIN</text>
             <text x="80" y="107" text-anchor="middle" font-family="'Lato',Arial,sans-serif" font-size="7" fill="#3a7bbf" opacity="0.75">INTER.</text>
             <text x="80" y="126" text-anchor="middle" font-family="'Lato',Arial,sans-serif" font-size="7.5" fill="#1a3557" opacity="0.85" font-weight="700">PRÈS</text>
-            <!-- Verre de loin pour myope (droit) — illustration "monovision" -->
             <path d="M98 82 Q140 72 182 82" fill="rgba(91,159,214,0.15)" stroke="rgba(91,159,214,0.25)" stroke-width="0.5"/>
             <path d="M100 108 Q140 118 180 108 L180 128 Q140 130 100 128 Z" fill="rgba(26,53,87,0.25)"/>
             <text x="140" y="82"  text-anchor="middle" font-family="'Lato',Arial,sans-serif" font-size="7" fill="#3a7bbf" opacity="0.8">LOIN</text>
             <text x="140" y="120" text-anchor="middle" font-family="'Lato',Arial,sans-serif" font-size="7" fill="#1a3557" opacity="0.75">PRÈS</text>
-            <!-- Fléches "couloir progressif" -->
             <path d="M68 88 Q66 106 70 120" stroke="rgba(58,123,191,0.3)" stroke-width="1" fill="none" stroke-dasharray="2 2"/>
-            <!-- Légende âge -->
             <text x="110" y="168" text-anchor="middle" font-family="'Lato',Arial,sans-serif" font-size="8.5" fill="#4a6080" font-weight="700">À partir de 45 ans</text>
             <text x="110" y="182" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#4a6080" opacity="0.7" font-style="italic">Verres progressifs — zones de vision</text>
           </svg>
@@ -239,7 +215,6 @@
 
     </section>
 
-    <!-- CTA -->
     <section class="page-cta" aria-label="Prendre rendez-vous">
       <div class="page-cta-inner">
         <h2>Votre vision mérite le meilleur</h2>
@@ -268,7 +243,41 @@
   </footer>
 
   <script>
-    (function(){const b=document.getElementById('hamburger-btn'),n=document.getElementById('main-nav');if(!b||!n)return;b.addEventListener('click',function(){const o=n.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');const s=b.querySelectorAll('span');if(o){s[0].style.transform='rotate(45deg) translate(5px,5px)';s[1].style.opacity='0';s[2].style.transform='rotate(-45deg) translate(5px,-5px)';}else{s[0].style.transform='';s[1].style.opacity='';s[2].style.transform='';}});const d=n.querySelector('.nav-dropdown > a.nav-more');if(d)d.addEventListener('click',function(e){if(window.innerWidth<=680){e.preventDefault();d.closest('.nav-dropdown').classList.toggle('mobile-open');}});n.querySelectorAll('a:not(.nav-more)').forEach(function(l){l.addEventListener('click',function(){n.classList.remove('open');b.setAttribute('aria-expanded','false');const s=b.querySelectorAll('span');s[0].style.transform='';s[1].style.opacity='';s[2].style.transform='';});});})();
+    (function(){
+      const b=document.getElementById('hamburger-btn'),n=document.getElementById('main-nav');
+      if(!b||!n)return;
+      b.addEventListener('click',function(){
+        const o=n.classList.toggle('open');
+        b.setAttribute('aria-expanded',o?'true':'false');
+        const s=b.querySelectorAll('span');
+        if(o){
+          s[0].style.transform='rotate(45deg) translate(5px,5px)';
+          s[1].style.opacity='0';
+          s[2].style.transform='rotate(-45deg) translate(5px,-5px)';
+        }else{
+          s[0].style.transform='';
+          s[1].style.opacity='';
+          s[2].style.transform='';
+        }
+      });
+      const d=n.querySelector('.nav-dropdown > a.nav-more');
+      if(d)d.addEventListener('click',function(e){
+        if(window.innerWidth<=680){
+          e.preventDefault();
+          d.closest('.nav-dropdown').classList.toggle('mobile-open');
+        }
+      });
+      n.querySelectorAll('a:not(.nav-more)').forEach(function(l){
+        l.addEventListener('click',function(){
+          n.classList.remove('open');
+          b.setAttribute('aria-expanded','false');
+          const s=b.querySelectorAll('span');
+          s[0].style.transform='';
+          s[1].style.opacity='';
+          s[2].style.transform='';
+        });
+      });
+    })();
   </script>
 </body>
 </html>

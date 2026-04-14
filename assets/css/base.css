@@ -1,0 +1,91 @@
+/* Global Reset */
+*, *::before, *::after 
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Design Tokens & Theme Variables */
+:root 
+{
+  /* Brand Colors */
+  --navy:       #1a3557;
+  --navy-deep:  #0f2240;
+  --steel:      #3a7bbf;
+  --steel-light:#5b9fd6;
+  --sky:        #d6eaf8;
+  --ice:        #eef6fc;
+  --welcome-bg: #2b5ea7;
+  
+  /* Neutral Colors */
+  --white:      #ffffff;
+  --off-white:  #f7fafd;
+  --text-dark:  #1e2d42;
+  --text-mid:   #4a6080;
+  --text-light: #7d9ab5;
+  --border:     rgba(58, 123, 191, 0.18);
+
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-serif:   'Cormorant Garamond', Georgia, serif;
+  --font-sans:    'Lato', Arial, sans-serif;
+
+  /* UI Elements */
+  --radius: 4px;
+  --shadow: 0 4px 32px rgba(26, 53, 87, 0.10);
+  --shadow-card: 0 2px 16px rgba(26, 53, 87, 0.08);
+}
+
+/* Smooth scrolling for anchor links */
+html 
+{
+  scroll-behavior: smooth;
+}
+
+/* Base layout & typography defaults */
+body 
+{
+  font-family: var(--font-sans);
+  color: var(--text-dark);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden; /* Prevent horizontal scrollbars */
+}
+
+/* Reset link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Global Animations */
+@keyframes fadeInDown 
+{
+  from { opacity: 0; transform: translateY(-16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp 
+{
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn 
+{
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes shimmer 
+{
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+@keyframes lineExpand 
+{
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}

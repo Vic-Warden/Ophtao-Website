@@ -9,7 +9,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/home.css" />
 </head>
 <body>
 
@@ -39,7 +42,8 @@
       <nav id="main-nav" role="navigation" aria-label="Navigation principale">
         <a href="index.html" class="active">Page d'accueil</a>
         <a href="#infos-pratiques">Le cabinet</a>
-        <a href="#equipe">L'équipe médicale</a>
+        <a href="medical_team.html">L'équipe médicale</a>
+        
         <div class="nav-dropdown">
           <a href="#" class="nav-more" onclick="return false;">Plus <span class="chevron"></span></a>
           <div class="dropdown-menu">
@@ -263,6 +267,7 @@
 
       if (!btn || !nav) return;
 
+      // Toggle mobile menu
       btn.addEventListener('click', function () 
       {
         const isOpen = nav.classList.toggle('open');
@@ -279,7 +284,7 @@
         }
       });
 
-      // Mobile: toggle dropdown on tap
+      // Toggle dropdown menu on mobile
       const dropdownToggle = nav.querySelector('.nav-dropdown > a.nav-more');
       if (dropdownToggle) {
         dropdownToggle.addEventListener('click', function (e) 
@@ -292,7 +297,7 @@
         });
       }
 
-      // Close on nav link click (mobile)
+      // Close menu when a link is clicked (mobile)
       nav.querySelectorAll('a:not(.nav-more)').forEach(function (link) 
       {
         link.addEventListener('click', function () 

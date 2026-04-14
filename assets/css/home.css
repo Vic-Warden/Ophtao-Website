@@ -1,0 +1,517 @@
+.hero 
+{
+  position: relative;
+  width: 100%;
+  height: 455px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background & Overlays */
+.hero-bg 
+{
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(160deg, rgba(10,25,55,0.88) 0%, rgba(26,53,87,0.78) 40%, rgba(40,90,150,0.72) 100%),
+    url('https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?w=1600&q=80&auto=format&fit=crop') center center / cover no-repeat;
+  animation: fadeIn 1s ease both;
+}
+
+.hero-glow 
+{
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(91, 159, 214, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Corner Decorations */
+.hero-deco 
+{
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  width: 80px;
+  height: 80px;
+  border-top: 1.5px solid rgba(255,255,255,0.25);
+  border-left: 1.5px solid rgba(255,255,255,0.25);
+  pointer-events: none;
+}
+
+.hero-deco-br 
+{
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+  width: 80px;
+  height: 80px;
+  border-bottom: 1.5px solid rgba(255,255,255,0.25);
+  border-right: 1.5px solid rgba(255,255,255,0.25);
+  pointer-events: none;
+}
+
+/* Hero Content */
+.hero-content 
+{
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease 0.3s both;
+}
+
+.hero-eyebrow 
+{
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--steel-light);
+  margin-bottom: 0.8rem;
+  opacity: 0.9;
+}
+
+.hero-content h1 
+{
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.22;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.35);
+}
+
+.hero-content h1 .accent 
+{
+  font-style: italic;
+  font-weight: 400;
+  color: var(--sky);
+}
+
+.hero-divider 
+{
+  width: 64px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--steel-light), transparent);
+  margin: 1rem auto;
+}
+
+.hero-sub 
+{
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.65);
+  letter-spacing: 0.06em;
+  font-weight: 300;
+}
+
+/* Animated Scroll Indicator */
+.scroll-hint 
+{
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.5;
+  animation: fadeIn 1s ease 1.2s both;
+}
+
+.scroll-hint span 
+{
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  font-family: var(--font-sans);
+}
+
+.scroll-arrow 
+{
+  width: 1px;
+  height: 36px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent);
+  animation: fadeInDown 1.5s ease 1.5s infinite;
+}
+
+.welcome 
+{
+  background: var(--welcome-bg);
+  padding: 1.8rem 2rem 2.2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome::before 
+{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(255,255,255,0.04) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(255,255,255,0.04) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.welcome-inner 
+{
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Decorative Ornaments */
+.welcome-ornament 
+{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.welcome-ornament-line 
+{
+  flex: 1;
+  max-width: 80px;
+  height: 1px;
+  background: rgba(255,255,255,0.25);
+}
+
+.welcome-ornament-dot 
+{
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+}
+
+.welcome h2 
+{
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 3vw, 1.9rem);
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  letter-spacing: 0.01em;
+}
+
+.welcome p 
+{
+  font-family: var(--font-sans);
+  font-size: 0.96rem;
+  line-height: 1.78;
+  color: rgba(255,255,255,0.82);
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+/* Signature Block */
+.welcome-signature 
+{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.signature-block 
+{
+  text-align: right;
+  border-right: 2px solid rgba(255,255,255,0.3);
+  padding-right: 1.2rem;
+}
+
+.signature-block .courtesy 
+{
+  font-family: var(--font-serif);
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.55);
+  font-style: italic;
+  margin-bottom: 4px;
+}
+
+.signature-block .name 
+{
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 0.05em;
+}
+
+/* Info Cards Section */
+.info-section 
+{
+  background: var(--off-white);
+  padding: 5.5rem 2rem;
+}
+
+.info-section-title 
+{
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.info-section-title h2 
+{
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.6rem;
+}
+
+.section-rule 
+{
+  width: 48px;
+  height: 2px;
+  background: var(--steel);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* 3-Column Grid */
+.info-grid 
+{
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Individual Card Styling */
+.info-card 
+{
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2.4rem 2rem;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-card:hover 
+{
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(26,53,87,0.13);
+}
+
+.card-icon 
+{
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--ice);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+}
+
+.card-icon svg 
+{
+  width: 22px;
+  height: 22px;
+  color: var(--steel);
+}
+
+.info-card h3 
+{
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.02em;
+}
+
+.info-card p 
+{
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--text-mid);
+  font-weight: 300;
+  flex: 1; 
+  margin-bottom: 1.4rem;
+}
+
+/* Address & Map Link */
+.address-text 
+{
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text-mid);
+  font-weight: 300;
+}
+
+.address-text strong 
+{
+  display: block;
+  font-weight: 700;
+  color: var(--text-dark);
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.map-link 
+{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--steel);
+  transition: color 0.2s;
+}
+
+.map-link:hover 
+{
+  color: var(--navy);
+}
+
+.map-link svg 
+{
+  width: 14px;
+  height: 14px;
+}
+
+/* Opening Hours List */
+.hours-list 
+{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.hours-list li 
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--ice);
+  font-size: 0.87rem;
+}
+
+.hours-list li:last-child 
+{
+  border-bottom: none;
+}
+
+.hours-list .day 
+{
+  font-weight: 400;
+  color: var(--text-mid);
+  font-family: var(--font-sans);
+}
+
+.hours-list .time 
+{
+  font-weight: 700;
+  color: var(--text-dark);
+  font-size: 0.83rem;
+  letter-spacing: 0.03em;
+}
+
+.hours-list .closed 
+{
+  color: var(--text-light);
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* Tablets */
+@media (max-width: 900px) 
+{
+  .info-grid 
+  {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  /* Center the third card on a 2-column grid */
+  .info-grid .info-card:last-child 
+  {
+    grid-column: 1 / -1;
+    max-width: 420px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 680px) 
+{
+  .hero 
+  {
+    height: 300px;
+  }
+  
+  .hero-content h1 
+  {
+    font-size: 1.5rem;
+  }
+  
+  .hero-deco, 
+  .hero-deco-br 
+  {
+    display: none;
+  }
+  
+  .welcome 
+  {
+    padding: 2rem 1.5rem;
+  }
+  
+  .welcome-signature 
+  {
+    justify-content: center;
+  }
+  
+  .signature-block 
+  {
+    text-align: center;
+    border-right: none;
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+    padding-right: 0;
+    padding-bottom: 0.8rem;
+  }
+  
+  .info-grid 
+  {
+    grid-template-columns: 1fr;
+  }
+  
+  .info-grid .info-card:last-child 
+  {
+    grid-column: auto;
+    max-width: none;
+  }
+  
+  .info-section 
+  {
+    padding: 3.5rem 1.2rem;
+  }
+}

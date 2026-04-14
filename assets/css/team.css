@@ -1,0 +1,371 @@
+/* Section Containers */
+.team-section 
+{
+  background: var(--white);
+  padding: 5rem 2rem 4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Alternate background for even sections */
+.team-section--alt 
+{
+  background: var(--off-white);
+}
+
+/* Section Headers */
+.team-section-header 
+{
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+  max-width: 1100px;
+  margin: 0 auto 3.5rem;
+}
+
+.team-section-label 
+{
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* Large decorative section number */
+.team-section-number 
+{
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--border);
+  line-height: 1;
+  user-select: none;
+  margin-top: 0.1rem;
+}
+
+.team-section-label h2 
+{
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+.team-section-label h2 em 
+{
+  font-style: italic;
+  font-weight: 400;
+  color: var(--steel);
+}
+
+.team-section-desc 
+{
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  line-height: 1.85;
+  color: var(--text-mid);
+  font-weight: 300;
+  max-width: 540px;
+  padding-top: 0.4rem;
+  border-left: 2px solid var(--border);
+  padding-left: 2rem;
+}
+
+/* Grid Layouts */
+.team-grid 
+{
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.8rem;
+}
+
+/* Grid columns based on category */
+.team-grid--surgeons 
+{
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.team-grid--ortho 
+{
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 780px;
+}
+
+.team-grid--admin 
+{
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 780px;
+}
+
+/* Team Cards */
+.team-card 
+{
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-top: 3px solid var(--navy); /* Default border color */
+}
+
+/* Category-specific top border colors */
+.team-card--ortho 
+{
+  border-top-color: var(--steel);
+}
+
+.team-card--admin 
+{
+  border-top-color: var(--steel-light);
+}
+
+.team-card:hover 
+{
+  transform: translateY(-5px);
+  box-shadow: 0 10px 36px rgba(26, 53, 87, 0.14);
+}
+
+/* Avatar Section */
+.team-card-avatar 
+{
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, var(--navy) 0%, #0a1a38 100%); /* Default gradient */
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* Inner glow effect */
+.team-card-avatar::before 
+{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 80%, rgba(58, 123, 191, 0.2) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Category-specific avatar backgrounds */
+.team-card-avatar--ortho 
+{
+  background: linear-gradient(160deg, var(--steel) 0%, var(--navy) 100%);
+}
+
+.team-card-avatar--admin 
+{
+  background: linear-gradient(160deg, var(--steel-light) 0%, var(--steel) 100%);
+}
+
+.team-card-avatar svg 
+{
+  width: 90px;
+  height: 90px;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.35));
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-card-avatar svg 
+{
+  transform: scale(1.05);
+}
+
+/* Card Content */
+/* Flex column to push content and equalize heights */
+.team-card-body 
+{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.6rem 1.6rem 1.8rem;
+}
+
+.team-card-meta 
+{
+  margin-bottom: 0.2rem;
+}
+
+.team-card-name 
+{
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.3;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.01em;
+}
+
+.team-card-title 
+{
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin-bottom: 0;
+}
+
+/* Category-specific title colors */
+.team-card-title--ortho 
+{
+  color: var(--steel);
+}
+
+.team-card-title--admin 
+{
+  color: var(--steel-light);
+}
+
+/* Small divider line under title */
+.team-card-rule 
+{
+  width: 32px;
+  height: 2px;
+  background: var(--steel);
+  border-radius: 2px;
+  margin: 0.9rem 0 1rem;
+}
+
+.team-card-rule--ortho 
+{
+  background: var(--steel);
+}
+
+.team-card-rule--admin 
+{
+  background: var(--steel-light);
+}
+
+.team-card-content 
+{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Custom Lists inside Cards */
+.team-diploma-list 
+{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.team-diploma-list li 
+{
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--text-mid);
+  font-weight: 300;
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+/* Custom diamond bullet */
+.team-diploma-list li::before 
+{
+  content: '';
+  display: inline-block;
+  flex-shrink: 0;
+  width: 5px;
+  height: 5px;
+  background: var(--steel);
+  border-radius: 1px;
+  transform: rotate(45deg);
+  margin-top: 7px;
+}
+
+.team-diploma-list li strong 
+{
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.team-card-text 
+{
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--text-mid);
+  font-weight: 300;
+}
+
+/* Placeholder text style */
+.team-card-text--pending 
+{
+  font-style: italic;
+  color: var(--text-light);
+  font-size: 0.8rem;
+}
+
+/* Responsive Design */
+/* Large Tablets */
+@media (max-width: 1024px) 
+{
+  .team-grid--surgeons 
+  {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Standard Tablets */
+@media (max-width: 840px) 
+{
+  .team-section-header 
+  {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .team-section-desc 
+  {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid var(--border);
+    padding-top: 1.2rem;
+    max-width: 100%;
+  }
+  .team-grid--ortho, .team-grid--admin 
+  {
+    max-width: 100%;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 560px) 
+{
+  /* Force all grids to single column */
+  .team-grid--surgeons, .team-grid--ortho, .team-grid--admin 
+  {
+    grid-template-columns: 1fr;
+  }
+  .team-section 
+  {
+    padding: 3.5rem 1.2rem 3rem;
+  }
+  .team-card-avatar 
+  {
+    height: 140px;
+  }
+  .team-card-avatar svg 
+  {
+    width: 76px;
+    height: 76px;
+  }
+}
