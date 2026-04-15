@@ -189,6 +189,8 @@
   flex-direction: column;
   flex: 1;
   padding: 1.6rem 1.6rem 1.8rem;
+  /* Prevent flex from stretching inline text */
+  text-align: left;
 }
 
 .team-card-meta 
@@ -249,12 +251,14 @@
   background: var(--steel-light);
 }
 
+/* Flex column, left-aligned — prevents Flexbox from word-spacing text */
 .team-card-content 
 {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  text-align: left;
 }
 
 /* Custom Lists inside Cards */
@@ -264,6 +268,10 @@
   display: flex;
   flex-direction: column;
   gap: 0.55rem;
+  /* Explicit left-align so word-spacing never stretches across full width */
+  text-align: left;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .team-diploma-list li 
@@ -276,6 +284,9 @@
   display: flex;
   align-items: flex-start;
   gap: 9px;
+  /* Left-align text inside each list item — fixes word-spacing stretch bug */
+  text-align: left;
+  width: 100%;
 }
 
 /* Custom diamond bullet */
@@ -305,6 +316,7 @@
   line-height: 1.7;
   color: var(--text-mid);
   font-weight: 300;
+  text-align: left;
 }
 
 /* Placeholder text style */
