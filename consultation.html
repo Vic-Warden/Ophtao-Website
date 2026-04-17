@@ -4,22 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Consultation Ophtalmologique — Ophtao</title>
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
-  
+
+  <!-- Site stylesheets -->
   <link rel="stylesheet" href="assets/css/base.css" />
   <link rel="stylesheet" href="assets/css/layout.css" />
   <link rel="stylesheet" href="assets/css/components.css" />
   <link rel="stylesheet" href="assets/css/editorial.css" />
+
+  <!-- Chatbot stylesheet -->
+  <link rel="stylesheet" href="chatbox/css/chatbox.css" />
 </head>
 <body>
 
+  <!-- Regulatory top bar -->
   <div class="top-bar">
     <strong>Cabinet conventionné secteur 1</strong>
      —  Assurance maladie obligatoire acceptée  —  Tiers payant pratiqué
   </div>
 
+  <!-- Sticky header with dropdown nav -->
   <header>
     <div class="header-inner">
       <a href="index.html" class="logo" aria-label="Ophtao – Accueil">
@@ -35,6 +43,7 @@
           <div class="tagline">Dr Mégret & Associés</div>
         </div>
       </a>
+
       <nav id="main-nav" role="navigation" aria-label="Navigation principale">
         <a href="index.html">Page d'accueil</a>
         <a href="index.html#infos-pratiques">Le cabinet</a>
@@ -49,6 +58,7 @@
           </div>
         </div>
       </nav>
+
       <button class="hamburger" id="hamburger-btn" aria-label="Ouvrir le menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -57,6 +67,7 @@
 
   <main>
 
+    <!-- Page banner -->
     <section class="page-hero" aria-label="Introduction">
       <div class="page-hero-inner">
         <span class="page-hero-label">Soins & Suivis</span>
@@ -71,8 +82,10 @@
       </div>
     </section>
 
+    <!-- Alternating editorial blocks -->
     <section class="editorial-section" aria-label="Types de consultations">
 
+      <!-- 01 — Standard eye exam -->
       <div class="editorial-block">
         <div class="editorial-number" aria-hidden="true"><span>01 — Bilan visuel</span></div>
         <div class="editorial-text">
@@ -101,12 +114,12 @@
         </div>
       </div>
 
+      <!-- 02 — Pediatric ophthalmology -->
       <div class="editorial-block reverse">
         <div class="editorial-number" aria-hidden="true"><span>02 — Pédiatrie</span></div>
         <div class="editorial-visual" aria-hidden="true" style="padding: 0;">
           <img src="assets/images/pediatrie.png" alt="Examen ophtalmologique pédiatrique" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
         </div>
-        
         <div class="editorial-text">
           <span class="editorial-badge">Ophtalmologie pédiatrique</span>
           <h2>Consultation Pédiatrique<br><em>Dépistage précoce</em></h2>
@@ -129,6 +142,7 @@
         </div>
       </div>
 
+      <!-- 03 — Diabetic patient follow-up -->
       <div class="editorial-block">
         <div class="editorial-number" aria-hidden="true"><span>03 — Diabète</span></div>
         <div class="editorial-text">
@@ -157,6 +171,7 @@
         </div>
       </div>
 
+      <!-- 04 — Contact lens fitting -->
       <div class="editorial-block reverse">
         <div class="editorial-number" aria-hidden="true"><span>04 — Lentilles</span></div>
         <div class="editorial-visual" aria-hidden="true" style="padding: 0;">
@@ -185,6 +200,7 @@
         </div>
       </div>
 
+      <!-- 05 — Ophthalmological emergencies -->
       <div class="editorial-block">
         <div class="editorial-number" aria-hidden="true"><span>05 — Urgences</span></div>
         <div class="editorial-text">
@@ -215,17 +231,25 @@
 
     </section>
 
+    <!-- Call to action -->
     <section class="page-cta" aria-label="Prendre rendez-vous">
       <div class="page-cta-inner">
         <h2>Consultation ou urgence ?</h2>
         <p>Contactez-nous directement ou prenez rendez-vous en ligne. Des créneaux d'urgence sont disponibles chaque jour.</p>
         <div class="page-cta-buttons">
           <a href="tel:0139139191" class="btn-cta-phone">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.95 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012.88 2h3a2 2 0 012 1.72c.127.96.36 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.95 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012.88 2h3a2 2 0 012 1.72c.127.96.36 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+            </svg>
             Appeler le 01.39.13.91.91
           </a>
           <a href="https://www.doctolib.fr/ophtalmologue/houilles/olivier-megret/booking/motives?telehealth=false&specialityId=4&placeId=practice-7892&pid=practice-7892&speciality_ids%5B%5D=4&source=deep_link" class="btn-cta-rdv">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
             Prendre rendez-vous
           </a>
         </div>
@@ -236,52 +260,96 @@
 
   <footer>
     <p>© 2025 <span>Ophtao — Dr Mégret & Associés</span>  •  60 rue Hoche, 78800 Houilles  •  Cabinet conventionné secteur 1</p>
-    <p style="margin-top:6px">Mentions légales  •  Politique de confidentialité  •  Site réalisé par le cabinet</p>
+    <p style="margin-top: 6px;">Mentions légales  •  Politique de confidentialité  •  Site réalisé par le cabinet</p>
   </footer>
 
-  <script>
-    (function(){
-      const b=document.getElementById('hamburger-btn'),
-            n=document.getElementById('main-nav');
-      if(!b||!n)return;
-      
-      // Toggle mobile menu
-      b.addEventListener('click',function(){
-        const o=n.classList.toggle('open');
-        b.setAttribute('aria-expanded',o?'true':'false');
-        const s=b.querySelectorAll('span');
-        if(o){
-          s[0].style.transform='rotate(45deg) translate(5px,5px)';
-          s[1].style.opacity='0';
-          s[2].style.transform='rotate(-45deg) translate(5px,-5px)';
-        }else{
-          s[0].style.transform='';
-          s[1].style.opacity='';
-          s[2].style.transform='';
-        }
-      });
-      
-      // Toggle dropdown menu on mobile
-      const d=n.querySelector('.nav-dropdown > a.nav-more');
-      if(d)d.addEventListener('click',function(e){
-        if(window.innerWidth<=680){
-          e.preventDefault();
-          d.closest('.nav-dropdown').classList.toggle('mobile-open');
-        }
-      });
-      
-      // Close menu when a link is clicked
-      n.querySelectorAll('a:not(.nav-more)').forEach(function(l){
-        l.addEventListener('click',function(){
-          n.classList.remove('open');
-          b.setAttribute('aria-expanded','false');
-          const s=b.querySelectorAll('span');
-          s[0].style.transform='';
-          s[1].style.opacity='';
-          s[2].style.transform='';
-        });
-      });
-    })();
-  </script>
+  <!-- Chatbot floating button -->
+  <button id="ophtao-chat-bubble" aria-label="Ouvrir l'assistant virtuel Ophtao" title="Assistant Ophtao">
+    <svg id="bubble-icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+    </svg>
+    <svg id="bubble-icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" style="display:none;">
+      <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+    </svg>
+    <span class="bubble-badge" id="chat-badge"></span>
+  </button>
+
+  <!-- Chatbot window -->
+  <div id="ophtao-chat-window" role="dialog" aria-label="Assistant virtuel Ophtao" aria-modal="true">
+
+    <div class="chat-header">
+      <div class="chat-header-logo">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 16C3 16 8.5 7 16 7C23.5 7 29 16 29 16C29 16 23.5 25 16 25C8.5 25 3 16 3 16Z" stroke="white" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
+          <circle cx="16" cy="16" r="4.5" stroke="white" stroke-width="1.8" fill="none"/>
+          <circle cx="17.5" cy="14.5" r="1.2" fill="white"/>
+        </svg>
+      </div>
+      <div class="chat-header-text">
+        <div class="chat-header-title">Assistant Ophtao</div>
+        <div class="chat-header-subtitle">Cabinet Dr Mégret & Associés</div>
+      </div>
+      <div class="chat-status">
+        <span class="chat-status-dot" id="status-dot"></span>
+        <span id="status-label">En ligne</span>
+      </div>
+      <button id="chat-close-btn" aria-label="Fermer le chat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="chat-messages" id="chat-messages" aria-live="polite" aria-atomic="false">
+
+      <div class="chat-welcome">
+        <div class="chat-welcome-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 21C12 21 5 14.5 5 9.5C5 6 8.1 3 12 3C15.9 3 19 6 19 9.5C19 14.5 12 21 12 21Z"/>
+            <circle cx="12" cy="9.5" r="2.5"/>
+          </svg>
+        </div>
+        <h4>Bonjour, je suis l'assistant du cabinet&nbsp;Ophtao</h4>
+        <p>Je réponds à vos questions sur nos soins, horaires et équipements.<br>Je ne remplace pas un avis médical.</p>
+      </div>
+
+      <div class="chat-suggestions" id="chat-suggestions">
+        <button class="chat-suggestion-btn" data-question="Quels sont vos horaires d'ouverture ?">🕐 Horaires</button>
+        <button class="chat-suggestion-btn" data-question="Comment prendre rendez-vous ?">📅 Rendez-vous</button>
+        <button class="chat-suggestion-btn" data-question="Quelles pathologies traitez-vous ?">👁 Pathologies</button>
+        <button class="chat-suggestion-btn" data-question="Où est situé le cabinet ?">📍 Adresse</button>
+      </div>
+
+    </div>
+
+    <div class="chat-input-area">
+      <div class="chat-input-row">
+        <textarea
+          id="chat-input"
+          placeholder="Posez votre question…"
+          rows="1"
+          aria-label="Votre message"
+          maxlength="500"
+        ></textarea>
+        <button id="chat-send-btn" aria-label="Envoyer" disabled>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"/>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+          </svg>
+        </button>
+      </div>
+      <p class="chat-footer-note">Informations non médicales uniquement — En cas d'urgence, appelez le 15</p>
+    </div>
+
+  </div>
+
+  <!-- Configuration -->
+  <script src="chatbox/js/config.js"></script>
+
+  <!-- Global UI interactions -->
+  <script src="assets/js/main.js"></script>
+  <!-- Chatbot logic -->
+  <script src="chatbox/js/script.js"></script>
+
 </body>
 </html>
