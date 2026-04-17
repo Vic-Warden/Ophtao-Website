@@ -1,0 +1,470 @@
+/*   Design tokens mirroring the Ophtao brand palette   */
+:root {
+  --chat-navy:        #1a3557;
+  --chat-navy-deep:   #0f2240;
+  --chat-steel:       #3a7bbf;
+  --chat-steel-light: #5b9fd6;
+  --chat-sky:         #d6eaf8;
+  --chat-ice:         #eef6fc;
+  --chat-white:       #ffffff;
+  --chat-border:      rgba(58, 123, 191, 0.18);
+  --chat-font-display:'Playfair Display', Georgia, serif;
+  --chat-font-sans:   'Lato', Arial, sans-serif;
+  --chat-radius:      10px;
+  --chat-shadow:      0 8px 40px rgba(15, 34, 64, 0.28);
+}
+
+/*   Floating action button   */
+#ophtao-chat-bubble {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--chat-navy) 0%, var(--chat-steel) 100%);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 24px rgba(26, 53, 87, 0.40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  outline: none;
+}
+
+#ophtao-chat-bubble:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 32px rgba(26, 53, 87, 0.50);
+}
+
+#ophtao-chat-bubble svg {
+  width: 26px;
+  height: 26px;
+  color: var(--chat-white);
+  transition: opacity 0.2s;
+}
+
+/* Unread badge */
+#ophtao-chat-bubble .bubble-badge {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #e74c3c;
+  border: 2px solid white;
+  display: none;
+}
+
+/*   Chat window   */
+#ophtao-chat-window {
+  position: fixed;
+  bottom: 100px;
+  right: 28px;
+  z-index: 9998;
+  width: 370px;
+  max-width: calc(100vw - 40px);
+  height: 540px;
+  max-height: calc(100vh - 130px);
+  background: var(--chat-white);
+  border-radius: var(--chat-radius);
+  box-shadow: var(--chat-shadow);
+  border: 1px solid var(--chat-border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  /* Hidden by default — revealed via .chat-open */
+  opacity: 0;
+  transform: translateY(16px) scale(0.97);
+  pointer-events: none;
+  transition: opacity 0.28s ease, transform 0.28s ease;
+}
+
+#ophtao-chat-window.chat-open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: all;
+}
+
+/*   Window header   */
+.chat-header {
+  background: linear-gradient(135deg, var(--chat-navy-deep) 0%, var(--chat-navy) 100%);
+  padding: 16px 18px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.chat-header-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.chat-header-logo svg {
+  width: 20px;
+  height: 20px;
+}
+
+.chat-header-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.chat-header-title {
+  font-family: var(--chat-font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--chat-white);
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+}
+
+.chat-header-subtitle {
+  font-family: var(--chat-font-sans);
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 1px;
+}
+
+/* Online / offline label */
+.chat-status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--chat-font-sans);
+  font-size: 0.67rem;
+  color: rgba(255, 255, 255, 0.50);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+}
+
+.chat-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2ecc71;
+  box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.25);
+  animation: statusPulse 2.5s ease infinite;
+}
+
+.chat-status-dot.offline {
+  background: #e74c3c;
+  box-shadow: none;
+  animation: none;
+}
+
+@keyframes statusPulse {
+  0%, 100% { box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.25); }
+  50%       { box-shadow: 0 0 0 5px rgba(46, 204, 113, 0.08); }
+}
+
+/* Close button */
+#chat-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.45);
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  transition: color 0.2s;
+  line-height: 0;
+}
+
+#chat-close-btn:hover {
+  color: rgba(255, 255, 255, 0.90);
+}
+
+#chat-close-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/*   Message list   */
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  scroll-behavior: smooth;
+}
+
+/* Thin scrollbar */
+.chat-messages::-webkit-scrollbar       { width: 4px; }
+.chat-messages::-webkit-scrollbar-track { background: transparent; }
+.chat-messages::-webkit-scrollbar-thumb { background: var(--chat-border); border-radius: 4px; }
+
+/* Single message row */
+.chat-message {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  animation: msgAppear 0.22s ease both;
+}
+
+@keyframes msgAppear {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Bot messages align left, user messages align right */
+.chat-message.bot  { flex-direction: row; }
+.chat-message.user { flex-direction: row-reverse; }
+
+/* Bot avatar */
+.msg-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--chat-navy) 0%, var(--chat-steel) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.msg-avatar svg {
+  width: 14px;
+  height: 14px;
+  color: white;
+}
+
+/* Message bubble */
+.msg-bubble {
+  max-width: 82%;
+  padding: 10px 14px;
+  border-radius: 16px;
+  font-family: var(--chat-font-sans);
+  font-size: 0.86rem;
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+.chat-message.bot .msg-bubble {
+  background: var(--chat-ice);
+  color: #1e2d42;
+  border-bottom-left-radius: 4px;
+  border: 1px solid var(--chat-border);
+}
+
+.chat-message.user .msg-bubble {
+  background: linear-gradient(135deg, var(--chat-navy) 0%, var(--chat-steel) 100%);
+  color: var(--chat-white);
+  border-bottom-right-radius: 4px;
+}
+
+/*   Welcome screen (shown before any message)   */
+.chat-welcome {
+  text-align: center;
+  padding: 8px 4px 4px;
+}
+
+.chat-welcome-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--chat-navy) 0%, var(--chat-steel) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  box-shadow: 0 4px 16px rgba(26, 53, 87, 0.20);
+}
+
+.chat-welcome-icon svg {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+.chat-welcome h4 {
+  font-family: var(--chat-font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--chat-navy);
+  margin-bottom: 5px;
+}
+
+.chat-welcome p {
+  font-family: var(--chat-font-sans);
+  font-size: 0.80rem;
+  color: #7d9ab5;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/*   Quick-reply suggestion chips   */
+.chat-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0 4px;
+}
+
+.chat-suggestion-btn {
+  background: var(--chat-ice);
+  border: 1px solid var(--chat-border);
+  border-radius: 20px;
+  padding: 6px 13px;
+  font-family: var(--chat-font-sans);
+  font-size: 0.75rem;
+  color: var(--chat-navy);
+  font-weight: 400;
+  cursor: pointer;
+  transition: background 0.18s, border-color 0.18s;
+  text-align: left;
+}
+
+.chat-suggestion-btn:hover {
+  background: var(--chat-sky);
+  border-color: var(--chat-steel-light);
+}
+
+/*   Typing indicator (three bouncing dots)   */
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 14px;
+  background: var(--chat-ice);
+  border: 1px solid var(--chat-border);
+  border-radius: 16px;
+  border-bottom-left-radius: 4px;
+  width: fit-content;
+}
+
+.typing-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--chat-steel-light);
+  animation: typingBounce 1.2s ease infinite;
+}
+
+.typing-dot:nth-child(2) { animation-delay: 0.15s; }
+.typing-dot:nth-child(3) { animation-delay: 0.30s; }
+
+@keyframes typingBounce {
+  0%, 60%, 100% { transform: translateY(0);    opacity: 0.5; }
+  30%           { transform: translateY(-5px); opacity: 1;   }
+}
+
+/*   Input area   */
+.chat-input-area {
+  padding: 12px 14px 14px;
+  border-top: 1px solid var(--chat-border);
+  background: var(--chat-white);
+  flex-shrink: 0;
+}
+
+.chat-input-row {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+#chat-input {
+  flex: 1;
+  border: 1.5px solid var(--chat-border);
+  border-radius: 22px;
+  padding: 9px 16px;
+  font-family: var(--chat-font-sans);
+  font-size: 0.86rem;
+  color: #1e2d42;
+  background: var(--chat-ice);
+  outline: none;
+  resize: none;
+  max-height: 90px;
+  min-height: 40px;
+  line-height: 1.5;
+  transition: border-color 0.2s;
+  font-weight: 300;
+}
+
+#chat-input::placeholder { color: #7d9ab5; }
+
+#chat-input:focus {
+  border-color: var(--chat-steel);
+  background: var(--chat-white);
+}
+
+/* Send button */
+#chat-send-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--chat-steel);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s, transform 0.15s;
+}
+
+#chat-send-btn:hover {
+  background: var(--chat-navy);
+  transform: scale(1.06);
+}
+
+#chat-send-btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+  transform: none;
+}
+
+#chat-send-btn svg {
+  width: 17px;
+  height: 17px;
+  color: white;
+  margin-left: 2px;
+}
+
+.chat-footer-note {
+  font-family: var(--chat-font-sans);
+  font-size: 0.62rem;
+  color: #7d9ab5;
+  text-align: center;
+  margin-top: 8px;
+  letter-spacing: 0.03em;
+}
+
+/*   Mobile: full-screen bottom sheet   */
+@media (max-width: 480px) {
+  #ophtao-chat-window {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 85vh;
+    max-height: 85vh;
+    border-radius: var(--chat-radius) var(--chat-radius) 0 0;
+    border-bottom: none;
+  }
+
+  #ophtao-chat-bubble {
+    bottom: 18px;
+    right: 18px;
+  }
+}
