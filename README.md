@@ -1,5 +1,7 @@
 # Ophtao — Cabinet d'Ophtalmologie Dr Mégret & Associés
 
+bonjour
+
 Static website for an ophthalmology clinic located at 60 rue Hoche, 78800 Houilles.
 Includes an AI-powered chatbot widget backed by a fully local RAG pipeline — no cloud dependency, no patient data leaves the premises. Specialized in French medical text using DrBERT.
 
